@@ -55,7 +55,7 @@ export default defineConfig({
     },
   },
   server: {
-    open: "/index.html",
+    open: "/landing.html",
   },
   plugins: [
     injectHTML(),
