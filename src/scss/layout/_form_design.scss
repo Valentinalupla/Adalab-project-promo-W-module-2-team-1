@@ -1,0 +1,103 @@
+.fieldset1 {
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+    gap: 22px;
+
+    font-family: $font-primary;
+    color: $primary-medium ;
+
+    &__legend {
+        border-color: transparent;
+        font-size: 18px;
+
+        i {
+            color: $color-warm-dark;
+            transform: scale(85%);
+
+            &::after {
+                margin-right: 5px;
+                content: "";
+            }
+        }
+    }
+
+    &__design {
+        font-size: 14px;
+        border-color: transparent;
+        display: flex;
+        gap: 10%;
+
+        &--palettes {
+
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+
+            .palette-1,
+            .palette-2,
+            .palette-3 {
+                display: flex;
+
+                div {
+                    width: 25px;
+                    padding: 10px 0px 10px 0px;
+                }
+
+                &__colour1 {
+                    margin-left: 5%;
+                }
+            }
+
+            .palette-1 {
+                &__colour1 {
+                    background-color: $color-cold-dark;
+                }
+
+                &__colour2 {
+                    background-color: $color-cold-medium;
+                }
+
+                &__colour3 {
+                    background-color: $color-cold-light;
+                }
+            }
+
+            .palette-2 {
+                &__colour1 {
+                    background-color: $palette-reds-dark;
+                }
+
+                &__colour2 {
+                    background-color: $palette-reds-medium;
+                }
+
+                &__colour3 {
+                    background-color: $palette-reds-light;
+                }
+            }
+
+            .palette-3 {
+                &__colour1 {
+                    background-color: $palette-neutrals-dark;
+                }
+
+                &__colour2 {
+                    background-color: $palette-neutrals-medium;
+                }
+
+                &__colour3 {
+                    background-color: $palette-neutrals-light;
+                }
+            }
+        }
+
+
+    }
+
+
+
+}

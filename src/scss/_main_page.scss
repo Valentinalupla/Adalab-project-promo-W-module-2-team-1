@@ -5,10 +5,15 @@
 @import 'layout/form';
 @import 'layout/footer';
 
+@import 'layout/form_design';
+@import 'layout/form_complete';
+@import 'layout/form_share';
+
+
 body {
     min-width: 320px;
     width: 100vw;
     height: 100vh;
 
-}
 
+}
