@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 0px 20px;
+
     gap: 22px;
 
     font-family: $font-primary;
@@ -12,6 +13,7 @@
     &__legend {
         border-color: transparent;
         font-size: 18px;
+        font-weight: 600;
 
         i {
             color: $color-warm-dark;
@@ -19,16 +21,21 @@
 
             &::after {
                 margin-right: 5px;
-                content: "";
+                content: "  ";
             }
         }
     }
 
     &__design {
+
+        label {
+            margin-left: 19px;
+        }
+
         font-size: 14px;
         border-color: transparent;
         display: flex;
-        gap: 10%;
+        gap: 35%;
 
         &--palettes {
 
