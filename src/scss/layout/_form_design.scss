@@ -1,27 +1,28 @@
 .fieldset {
+    min-width: 320px;
     border-color: transparent;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     padding: 0px 20px;
     gap: 22px;
 
     font-family: $font-primary;
     color: $primary-medium ;
-    width: 100vw;
+
 
 
     &__legend {
         border-color: transparent;
         font-size: 18px;
         font-weight: 600;
-        display: flex;
-        flex-direction: row;
-        // padding-right: 80px;
-
+        padding-right: 130px;
 
         .designIcon {
             color: $color-warm-dark;
             transform: scale(85%);
+
 
             &::after {
                 margin-right: 5px;
@@ -30,10 +31,12 @@
         }
 
         .iconUp {
-            &::before {
-                margin-right: 5px;
-                content: "";
-            }
+
+            transform: translateX(130px);
+        }
+
+        .iconDown {
+            transform: translateX(108px);
         }
 
 
@@ -43,9 +46,8 @@
         font-size: 14px;
         border-color: transparent;
         display: flex;
-        justify-content: center;
-        gap: 15%;
-
+        gap: 60px;
+        // padding-right: 100px;
 
         &--palettes {
 
