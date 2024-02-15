@@ -1,0 +1,135 @@
+.sectionPhoto {
+    background: linear-gradient(#bfcdd0, #dde9ed);
+    width: 100%;
+}
+
+.sectionPhotoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0 auto;
+    padding: 40px 0;
+    max-width: 240px;
+    
+    &__button {
+        border: solid 1px white;
+        border-radius: 15px;
+        padding: 6px 12px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5px;
+        align-self: flex-start;
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        &--icon {
+            i {
+            color:  #54585a;
+            }
+        }
+
+        &--reset {
+            font-size: 12px;
+            color: #54585a;
+            font-family: $font-primary;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 10px 5px 5px rgb(0, 0, 0, 0.2);
+
+        &--text {
+            h1 {
+                color: #114e4e;
+                font-size: 18px;
+                font-family: $font-secondary;
+            }
+            span {
+                color: #54585a;
+                font-size: 16px;
+                font-family: $font-primary;
+            }
+        }
+    }
+
+    &__img {
+        img {
+            max-height: 200px;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 12px;
+        
+        &--phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px #a2deaf;
+            border-radius: 50%;
+            background-color: transparent;
+            width: 32px;
+            height: 32px;
+
+            i {
+                color: #114e4e
+            }
+        }
+
+        &--email {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px #a2deaf;
+            border-radius: 50%;
+            background-color: transparent;
+            width: 32px;
+            height: 32px;
+
+            i {
+                color: #114e4e
+            }
+        }
+
+        &--linkedin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px #a2deaf;
+            border-radius: 50%;
+            background-color: transparent;
+            width: 32px;
+            height: 32px;
+
+            i {
+                color: #114e4e
+            }
+        }
+
+        &--github {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px #a2deaf;
+            border-radius: 50%;
+            background-color: transparent;
+            width: 32px;
+            height: 32px;
+
+            i {
+                color: #114e4e
+            }
+        }
+    }
+}
