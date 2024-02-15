@@ -1,6 +1,7 @@
 .sectionPhoto {
     background: linear-gradient(#bfcdd0, #dde9ed);
     width: 100%;
+    
 }
 
 .sectionPhotoContainer {
@@ -44,16 +45,26 @@
         background-color: white;
         box-shadow: 10px 5px 5px rgb(0, 0, 0, 0.2);
 
+        &--decoration {
+            background-color: $color-cold-medium;
+            width: 5px;
+            height: 42px;
+            position: absolute;
+            transform: translateY(17px);
+        }
+
         &--text {
-            h1 {
-                color: #114e4e;
+            padding: 21px 14px 10px 20px;
+            
+            & h2 {
+                color: $color-cold-dark;
                 font-size: 18px;
                 font-family: $font-secondary;
             }
-            span {
-                color: #54585a;
+             & span {
+                color: $primary-medium;
                 font-size: 16px;
-                font-family: $font-primary;
+                font-family: $font-secondary;
             }
         }
     }
