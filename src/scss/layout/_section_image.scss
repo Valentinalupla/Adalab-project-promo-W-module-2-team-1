@@ -4,14 +4,14 @@
     
 }
 
-.sectionPhotoContainer {
+.photoContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 50%;
     margin: 0 auto;
     padding: 40px 0;
-    max-width: 240px;
+    min-width: 240px;
     
     &__button {
         border: solid 1px white;
@@ -46,7 +46,6 @@
         box-shadow: 10px 5px 5px rgb(0, 0, 0, 0.2);
 
         &--decoration {
-            background-color: $color-cold-medium;
             width: 5px;
             height: 42px;
             position: absolute;
@@ -57,9 +56,9 @@
             padding: 21px 14px 10px 20px;
             
             & h2 {
-                color: $color-cold-dark;
                 font-size: 18px;
                 font-family: $font-secondary;
+
             }
              & span {
                 color: $primary-medium;
@@ -87,60 +86,89 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: solid 1px #a2deaf;
-            border-radius: 50%;
-            background-color: transparent;
             width: 32px;
             height: 32px;
-
-            i {
-                color: #114e4e
-            }
         }
 
         &--email {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: solid 1px #a2deaf;
-            border-radius: 50%;
-            background-color: transparent;
             width: 32px;
             height: 32px;
-
-            i {
-                color: #114e4e
-            }
         }
 
         &--linkedin {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: solid 1px #a2deaf;
-            border-radius: 50%;
-            background-color: transparent;
             width: 32px;
             height: 32px;
-
-            i {
-                color: #114e4e
-            }
         }
 
         &--github {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: solid 1px #a2deaf;
-            border-radius: 50%;
-            background-color: transparent;
             width: 32px;
             height: 32px;
-
-            i {
-                color: #114e4e
-            }
         }
+    }
+}
+
+.paletteOne {
+    .headerCard {
+        color: $color-cold-dark;
+    }
+    .photoContainer__card--decoration {
+        background-color: $color-cold-medium;
+    }
+    .containerIconCard {
+        border: solid 1px $color-cold-light;
+        border-radius: 50%;
+        background-color: transparent;
+
+    }
+
+    .iconCard {
+        color: $color-cold-dark;
+    }
+}
+
+.paletteTwo {
+    .headerCard {
+        color: $palette-warms-dark;
+    }
+    .photoContainer__card--decoration {
+        background-color: $palette-warms-medium;
+    }
+    .containerIconCard {
+        border: solid 1px $palette-warms-light;
+        border-radius: 50%;
+        background-color: transparent;
+
+    }
+
+    .iconCard {
+        color: $palette-warms-dark;
+    }
+}
+
+.paletteThree {
+    .headerCard {
+        color: $palette-neutrals-dark;
+    }
+    .photoContainer__card--decoration {
+        background-color: $palette-neutrals-medium;
+    }
+    .containerIconCard {
+        border: solid 1px $palette-neutrals-light;
+        border-radius: 50%;
+        background-color: transparent;
+
+    }
+
+    .iconCard {
+        color: $palette-neutrals-dark;
     }
 }

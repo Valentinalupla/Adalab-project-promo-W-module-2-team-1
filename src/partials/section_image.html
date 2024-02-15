@@ -1,35 +1,43 @@
-<section class="sectionPhoto">
-  <div class="sectionPhotoContainer">
-    <button class="sectionPhotoContainer__button">
-      <div class="sectionPhotoContainer__button--icon">
+<section class="js-sectionPhoto sectionPhoto paletteOne">
+  <div class="photoContainer">
+    <button class="photoContainer__button">
+      <div class="photoContainer__button--icon">
         <i class="fa-regular fa-trash-can trashCan"></i>
       </div>
-      <div class="sectionPhotoContainer__button--reset">RESET</div>
+      <div class="photoContainer__button--reset">RESET</div>
     </button>
-    <div class="sectionPhotoContainer__card">
-      <div class="sectionPhotoContainer__card--decoration"></div>
-      <div class="sectionPhotoContainer__card--text">
-        <h2>Nombre Apellido</h2>
+    <div class="photoContainer__card">
+      <div class="photoContainer__card--decoration js-decorationCard"></div>
+      <div class="photoContainer__card--text">
+        <h2 class="headerCard js-headerCard">Nombre Apellido</h2>
         <span>Front-end developer</span>
       </div>
-      <figure class="sectionPhotoContainer__img">
+      <figure class="photoContainer__img">
         <img
           src="/images/card-photo-example.jpg"
           alt="Esto es una imagen de la desarrolladora"
         />
       </figure>
-      <div class="sectionPhotoContainer__icons">
-        <div class="sectionPhotoContainer__icons--phone">
-          <i class="fa-solid fa-mobile-screen-button"></i>
+      <div class="photoContainer__icons">
+        <div
+          class="photoContainer__icons--phone js-containerIconCard containerIconCard"
+        >
+          <i class="fa-solid fa-mobile-screen-button js-iconCard iconCard"></i>
         </div>
-        <div class="sectionPhotoContainer__icons--email">
-          <i class="fa-regular fa-envelope"></i>
+        <div
+          class="photoContainer__icons--email js-containerIconCard containerIconCard"
+        >
+          <i class="fa-regular fa-envelope js-iconCard iconCard"></i>
         </div>
-        <div class="sectionPhotoContainer__icons--linkedin">
-          <i class="fa-brands fa-linkedin-in"></i>
+        <div
+          class="photoContainer__icons--linkedin js-containerIconCard containerIconCard"
+        >
+          <i class="fa-brands fa-linkedin-in js-iconCard iconCard"></i>
         </div>
-        <div class="sectionPhotoContainer__icons--github">
-          <i class="fa-brands fa-github-alt"></i>
+        <div
+          class="photoContainer__icons--github js-containerIconCard containerIconCard"
+        >
+          <i class="fa-brands fa-github-alt js-iconCard iconCard"></i>
         </div>
       </div>
     </div>
