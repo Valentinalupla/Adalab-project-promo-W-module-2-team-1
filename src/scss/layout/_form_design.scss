@@ -7,17 +7,20 @@
 
     font-family: $font-primary;
     color: $primary-medium ;
+    width: 100vw;
+
 
     &__legend {
         border-color: transparent;
         font-size: 18px;
         font-weight: 600;
+        display: flex;
+        flex-direction: row;
+        // padding-right: 80px;
+
 
         .designIcon {
             color: $color-warm-dark;
-        }
-
-        i {
             transform: scale(85%);
 
             &::after {
@@ -25,6 +28,15 @@
                 content: "";
             }
         }
+
+        .iconUp {
+            &::before {
+                margin-right: 5px;
+                content: "";
+            }
+        }
+
+
     }
 
     &__design {
@@ -32,7 +44,7 @@
         border-color: transparent;
         display: flex;
         justify-content: center;
-        gap: 10%;
+        gap: 15%;
 
 
         &--palettes {
