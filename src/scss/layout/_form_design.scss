@@ -23,7 +23,6 @@
             color: $color-warm-dark;
             transform: scale(85%);
 
-
             &::after {
                 margin-right: 5px;
                 content: "";
@@ -32,7 +31,7 @@
 
         .iconUp {
 
-            transform: translateX(130px);
+            transform: translateX(108px);
         }
 
         .iconDown {
@@ -118,10 +117,9 @@
                 }
             }
         }
-
-
     }
+}
 
-
-
+.collapsed {
+    display: none;
 }
