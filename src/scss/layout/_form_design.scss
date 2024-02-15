@@ -13,8 +13,11 @@
         font-size: 18px;
         font-weight: 600;
 
-        i {
+        .designIcon {
             color: $color-warm-dark;
+        }
+
+        i {
             transform: scale(85%);
 
             &::after {
@@ -28,7 +31,9 @@
         font-size: 14px;
         border-color: transparent;
         display: flex;
+        justify-content: center;
         gap: 10%;
+
 
         &--palettes {
 
