@@ -37,8 +37,6 @@
         .iconDown {
             transform: translateX(108px);
         }
-
-
     }
 
     &__design {
@@ -122,4 +120,20 @@
 
 .collapsed {
     display: none;
+}
+
+.changereds {
+
+    color: $palette-warms-dark;
+    border-color: $palette-warms-light;
+}
+
+.changeblues {
+    color: $color-cold-dark;
+    border-color: $color-cold-light;
+}
+
+.changeneutrals {
+    color: $palette-neutrals-dark;
+    border-color: $palette-neutrals-light;
 }

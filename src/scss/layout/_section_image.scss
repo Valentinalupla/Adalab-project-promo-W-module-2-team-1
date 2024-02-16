@@ -11,7 +11,7 @@
     margin: 0 auto;
     padding: 40px 0;
     max-width: 240px;
-    
+
     &__button {
         border: solid 1px white;
         border-radius: 15px;
@@ -27,7 +27,7 @@
 
         &--icon {
             i {
-            color:  #54585a;
+                color: #54585a;
             }
         }
 
@@ -46,10 +46,11 @@
 
         &--text {
             h1 {
-                color: #114e4e;
+                color: $color-cold-dark;
                 font-size: 18px;
                 font-family: $font-secondary;
             }
+
             span {
                 color: #54585a;
                 font-size: 16px;
@@ -71,7 +72,7 @@
         justify-content: center;
         gap: 10px;
         margin-bottom: 12px;
-        
+
         &--phone {
             display: flex;
             align-items: center;
@@ -83,7 +84,7 @@
             height: 32px;
 
             i {
-                color: #114e4e
+                //color: $color-cold-dark;
             }
         }
 
@@ -98,7 +99,7 @@
             height: 32px;
 
             i {
-                color: #114e4e
+                //color: $color-cold-dark;
             }
         }
 
@@ -113,7 +114,7 @@
             height: 32px;
 
             i {
-                color: #114e4e
+                // color: $color-cold-dark;
             }
         }
 
@@ -128,7 +129,7 @@
             height: 32px;
 
             i {
-                color: #114e4e
+                // color: $color-cold-dark;
             }
         }
     }
