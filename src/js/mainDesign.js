@@ -1,9 +1,11 @@
-//import variables from "../scss/core/variables.scss";
 
 
-const palette1 = document.querySelector(".input1");
-const palette2 = document.querySelector(".input2");
-const palette3 = document.querySelector(".input3");
+
+//const palette1 = document.querySelector(".input1");
+//const palette2 = document.querySelector(".input2");
+//const palette3 = document.querySelector(".input3");
+
+const palettes = document.querySelectorAll(".inputpal");
 
 const toCollapseMenu = document.querySelector(".fieldset__design");
 const upArrow = document.querySelector(".js-iconUp");
@@ -15,33 +17,28 @@ const cardIcon3 = document.querySelector(".imgIc3");
 const cardIcon4 = document.querySelector(".imgIc4");
 
 
+palettes.forEach(element => {
+    element.addEventListener('click', function (e) {
+        if (element.value == "colours1") {
 
+            removeRed();
+            removeNeutrals();
+            changeIconsBlue();
 
-palette1.addEventListener("click", () => {
-    setRadio();
-    console.log("1");
-    //cardIcon1.classList.remove("changereds");
-    removeRed();
-    removeNeutrals();
-    changeIconsBlue();
+        } if (element.value == "colours2") {
+            removeBlue()
+            removeNeutrals();
+            changeIconsRed();
 
+        } if (element.value == "colours3") {
 
+            removeBlue()
+            removeRed();
+            changeIconsNeutrals()
+        }
+    });
 });
-palette2.addEventListener("click", () => {
-    setRadio();
-    removeBlue()
-    removeNeutrals();
-    changeIconsRed();
 
-});
-palette3.addEventListener("click", () => {
-    setRadio();
-    removeBlue()
-    removeRed();
-    changeIconsNeutrals();
-
-    console.log("3");
-});
 
 upArrow.addEventListener("click", () => {
     collapseDesign();
@@ -57,7 +54,6 @@ function changeIconsRed() {
     cardIcon3.classList.add("changereds");
     cardIcon4.classList.add("changereds");
 }
-
 function changeIconsBlue() {
     cardIcon1.classList.add("changeblues");
     cardIcon2.classList.add("changeblues");
@@ -99,31 +95,12 @@ function setRadio() {
 }
 function collapseDesign() {
 
-    if (toCollapseMenu.classList.contains("collapsed")) {
-        toCollapseMenu.classList.remove("collapsed");
-        upArrow.classList.remove("collapsed");
-        downArrow.classList.add("collapsed");
-
-    } else {
-        toCollapseMenu.classList.add("collapsed");
-        upArrow.classList.add("collapsed");
-        downArrow.classList.remove("collapsed");
-    }
-
-
-
+    upArrow.classList.toggle("collapsed");
+    downArrow.classList.toggle("collapsed");
+    toCollapseMenu.classList.toggle("collapsed");
 }
 
-//probar a llamarlos con queryAll poniendo la msima clase para todos los elementos
 
-/*var allFormOne = document.querySelectorAll('.form1');
 
-allFormOne.forEach(element => {
-  element.addEventListener('change', function(e) {
-    console.log(`Ha cambiado el input ${e.target.id} \nTu sueldo se multiplicará por: ${e.target.value}`);
 
-  });
-});*/
 
-const r = document.querySelector("._variables.scss");
-console.log(r);
