@@ -16,6 +16,12 @@
                 content: "";
             }
         }
+        .arrow-up{
+            transform: translateX(100px);
+        }
+        .arrow-down{
+            transform: translateX(100px);
+        }
     }
     .icons {
         color: $primary-medium;
@@ -28,7 +34,8 @@
         
         font-size: 14px;
         color: $color-cold-dark;
-        padding: 7px;
+        padding-bottom: 7px;
+        padding-top: 7px;
     }
     input {
         font-size: 12px;
@@ -38,16 +45,36 @@
     }
    }
    .form_complete_button {
+
+        padding-bottom: 7px;
+        padding-top: 7px;
+    
+    div {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: left;
+        padding-top: 5px;
+         
+        input {
+            transform: translateX(30px);
+            width: 25px;
+            height: 25px;
+        }
+    }
     button {
         font-family: $font-primary;
+        font-size: 12px;
         color: $primary-light;
         background-color:  $color-warm-dark;
         border: none;
-        padding: 5px 15px;
+        padding: 5px 17px;
         border-radius: 5px;
+        
    }
 }
    
 }
-
+.hidden {
+    display: none;
+}
 
