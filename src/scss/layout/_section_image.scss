@@ -22,11 +22,8 @@
         flex-direction: row;
         justify-content: space-between;
         gap: 5px;
-        align-self: flex-start;
         margin-top: 10px;
         margin-bottom: 20px;
-        margin-right: 150px;
-
         &--icon {
             i {
             color:  #54585a;
@@ -117,59 +114,9 @@
     }
 }
 
-.paletteOne {
-    .headerCard {
-        color: $color-cold-dark;
-    }
-    .photoContainer__card--decoration {
-        background-color: $color-cold-medium;
-    }
-    .containerIconCard {
-        border: solid 1px $color-cold-light;
-        border-radius: 50%;
-        background-color: transparent;
-
-    }
-
-    .iconCard {
-        color: $color-cold-dark;
-    }
-}
-
-.paletteTwo {
-    .headerCard {
-        color: $palette-warms-dark;
-    }
-    .photoContainer__card--decoration {
-        background-color: $palette-warms-medium;
-    }
-    .containerIconCard {
-        border: solid 1px $palette-warms-light;
-        border-radius: 50%;
-        background-color: transparent;
-
-    }
-
-    .iconCard {
-        color: $palette-warms-dark;
-    }
-}
-
-.paletteThree {
-    .headerCard {
-        color: $palette-neutrals-dark;
-    }
-    .photoContainer__card--decoration {
-        background-color: $palette-neutrals-medium;
-    }
-    .containerIconCard {
-        border: solid 1px $palette-neutrals-light;
-        border-radius: 50%;
-        background-color: transparent;
-
-    }
-
-    .iconCard {
-        color: $palette-neutrals-dark;
-    }
+.align-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
