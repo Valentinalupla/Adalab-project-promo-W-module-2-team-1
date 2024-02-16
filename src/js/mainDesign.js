@@ -24,17 +24,20 @@ palettes.forEach(element => {
             removeRed();
             removeNeutrals();
             changeIconsBlue();
+            console.log(element.value);
 
         } if (element.value == "colours2") {
             removeBlue()
             removeNeutrals();
             changeIconsRed();
+            console.log(element.value);
 
         } if (element.value == "colours3") {
 
             removeBlue()
             removeRed();
             changeIconsNeutrals()
+            console.log(element.value);
         }
     });
 });
