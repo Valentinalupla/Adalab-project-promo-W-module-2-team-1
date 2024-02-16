@@ -13,8 +13,6 @@
     padding: 40px 0;
     min-width: 240px;
 
-    max-width: 240px;
-
     &__button {
         border: solid 1px white;
         border-radius: 15px;
@@ -53,156 +51,144 @@
             height: 42px;
             position: absolute;
             transform: translateY(17px);
+            background-color: $color-cold-medium;
         }
 
         &--text {
             padding: 21px 14px 10px 20px;
 
             & h2 {
-                h1 {
-                    color: $color-cold-dark;
-                    font-size: 18px;
-                    font-family: $font-secondary;
-
-                }
-
-                & span {
-                    color: $primary-medium;
-
-                    span {
-                        color: #54585a;
-                        font-size: 16px;
-                        font-family: $font-secondary;
-                    }
-                }
-            }
-
-            &__img {
-                img {
-                    max-height: 200px;
-                }
-            }
-
-            &__icons {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                margin-bottom: 12px;
-
-                &--phone {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 32px;
-                    height: 32px;
-
-                    i {
-                        //color: $color-cold-dark;
-                    }
-                }
-
-                &--email {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 32px;
-                    height: 32px;
-
-                    i {
-                        //color: $color-cold-dark;
-                    }
-                }
-
-                &--linkedin {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 32px;
-                    height: 32px;
-
-                    i {
-                        // color: $color-cold-dark;
-                    }
-                }
-
-                &--github {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 32px;
-                    height: 32px;
-                }
-            }
-        }
-
-        .paletteOne {
-            .headerCard {
-                color: $color-cold-dark;
-            }
-
-            .photoContainer__card--decoration {
-                background-color: $color-cold-medium;
-            }
-
-            .containerIconCard {
-                border: solid 1px $color-cold-light;
-                border-radius: 50%;
-                background-color: transparent;
+                font-size: 18px;
+                font-family: $font-secondary;
 
             }
 
-            .iconCard {
-                //color: $color-cold-dark;
-            }
-        }
-
-        .paletteTwo {
-            .headerCard {
-                color: $palette-warms-dark;
-            }
-
-            .photoContainer__card--decoration {
-                background-color: $palette-warms-medium;
-            }
-
-            .containerIconCard {
-                border: solid 1px $palette-warms-light;
-                border-radius: 50%;
-                background-color: transparent;
-
-            }
-
-            .iconCard {
-                //color: $palette-warms-dark;
-            }
-        }
-
-        .paletteThree {
-            .headerCard {
-                color: $palette-neutrals-dark;
-            }
-
-            .photoContainer__card--decoration {
-                background-color: $palette-neutrals-medium;
-            }
-
-            .containerIconCard {
-                border: solid 1px $palette-neutrals-light;
-                border-radius: 50%;
-                background-color: transparent;
-
-            }
-
-            .iconCard {
-                color: $palette-neutrals-dark;
+            & span {
+                color: $primary-medium;
+                font-size: 16px;
+                font-family: $font-secondary;
             }
         }
 
 
-        i {
-            // color: $color-cold-dark;
+    }
+
+    &__img {
+        img {
+            max-height: 200px;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 12px;
+
+
+
+        &--phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+        }
+
+        &--email {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+        }
+
+        &--linkedin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+        }
+
+        &--github {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
         }
     }
 }
+
+/*.paletteOne {
+    .headerCard {
+        //color: $color-cold-dark;
+    }
+
+    .photoContainer__card--decoration {
+        background-color: $color-cold-medium;
+    }
+
+    .containerIconCard {
+
+        background-color: transparent;
+
+    }
+
+    .iconCard {
+        //color: $color-cold-dark;
+    }
+}
+
+.paletteTwo {
+    .headerCard {
+        color: $palette-warms-dark;
+    }
+
+    .photoContainer__card--decoration {
+        background-color: $palette-warms-medium;
+    }
+
+    .containerIconCard {
+        border: solid 1px $palette-warms-light;
+        border-radius: 50%;
+        background-color: transparent;
+
+    }
+
+    .iconCard {
+        //color: $palette-warms-dark;
+    }
+}
+
+.paletteThree {
+    .headerCard {
+        color: $palette-neutrals-dark;
+    }
+
+    .photoContainer__card--decoration {
+        background-color: $palette-neutrals-medium;
+    }
+
+    .containerIconCard {
+        border: solid 1px $palette-neutrals-light;
+        border-radius: 50%;
+        background-color: transparent;
+
+    }
+
+    .iconCard {
+        //  color: $palette-neutrals-dark;
+    }
+}*/

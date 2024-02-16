@@ -126,14 +126,35 @@
 
     color: $palette-warms-dark;
     border-color: $palette-warms-light;
+
+
+}
+
+.decoR {
+    background-color: $palette-warms-medium;
 }
 
 .changeblues {
     color: $color-cold-dark;
     border-color: $color-cold-light;
+
+
 }
+
+.decoB {
+    background-color: $color-cold-medium;
+}
+
 
 .changeneutrals {
     color: $palette-neutrals-dark;
     border-color: $palette-neutrals-light;
+
+
+}
+
+.decoN {
+
+    background-color: $palette-neutrals-medium;
+
 }
