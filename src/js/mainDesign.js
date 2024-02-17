@@ -1,5 +1,4 @@
 
-
 const palettes = document.querySelectorAll(".inputpal");
 const icNs = document.querySelectorAll(".js-icons");
 
