@@ -56,6 +56,7 @@
 
         &--text {
             padding: 21px 14px 10px 20px;
+            color: $color-cold-dark;
 
             & h2 {
                 font-size: 18px;
@@ -97,6 +98,7 @@
             height: 32px;
             border: solid 1px $color-cold-light;
             border-radius: 50%;
+            color: $color-cold-dark;
         }
 
         &--email {
@@ -107,6 +109,7 @@
             height: 32px;
             border: solid 1px $color-cold-light;
             border-radius: 50%;
+            color: $color-cold-dark;
         }
 
         &--linkedin {
@@ -117,6 +120,7 @@
             height: 32px;
             border: solid 1px $color-cold-light;
             border-radius: 50%;
+            color: $color-cold-dark;
         }
 
         &--github {
@@ -127,68 +131,7 @@
             height: 32px;
             border: solid 1px $color-cold-light;
             border-radius: 50%;
+            color: $color-cold-dark;
         }
     }
 }
-
-/*.paletteOne {
-    .headerCard {
-        //color: $color-cold-dark;
-    }
-
-    .photoContainer__card--decoration {
-        background-color: $color-cold-medium;
-    }
-
-    .containerIconCard {
-
-        background-color: transparent;
-
-    }
-
-    .iconCard {
-        //color: $color-cold-dark;
-    }
-}
-
-.paletteTwo {
-    .headerCard {
-        color: $palette-warms-dark;
-    }
-
-    .photoContainer__card--decoration {
-        background-color: $palette-warms-medium;
-    }
-
-    .containerIconCard {
-        border: solid 1px $palette-warms-light;
-        border-radius: 50%;
-        background-color: transparent;
-
-    }
-
-    .iconCard {
-        //color: $palette-warms-dark;
-    }
-}
-
-.paletteThree {
-    .headerCard {
-        color: $palette-neutrals-dark;
-    }
-
-    .photoContainer__card--decoration {
-        background-color: $palette-neutrals-medium;
-    }
-
-    .containerIconCard {
-        border: solid 1px $palette-neutrals-light;
-        border-radius: 50%;
-        background-color: transparent;
-
-    }
-
-    .iconCard {
-        //  color: $palette-neutrals-dark;
-    }
-}*/

@@ -11,8 +11,6 @@
     font-family: $font-primary;
     color: $primary-medium ;
 
-
-
     &__legend {
         border-color: transparent;
         font-size: 18px;
@@ -123,11 +121,8 @@
 }
 
 .changereds {
-
     color: $palette-warms-dark;
     border-color: $palette-warms-light;
-
-
 }
 
 .decoR {
@@ -145,12 +140,9 @@
     background-color: $color-cold-medium;
 }
 
-
 .changeneutrals {
     color: $palette-neutrals-dark;
     border-color: $palette-neutrals-light;
-
-
 }
 
 .decoN {
