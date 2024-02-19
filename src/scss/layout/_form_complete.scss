@@ -9,7 +9,7 @@
         font-size: 18px;
         font-weight: bolder;
         color: $primary-medium;
-        i {
+        .leyend-icon {
             color: $color-warm-dark;
             &::after {
                 margin-right: 5px;
@@ -76,5 +76,6 @@
 }
 .hidden {
     display: none;
+    visibility: hidden;
 }
 
