@@ -3,45 +3,60 @@
 
 body {
     min-width: 320px;
+    min-height: 560px;
     width: 100vw;
     height: 100vh;
 
 }
+
 .main {
+
     height: 85vh;
-    background-color: #f5f5f5 ;
+    background-color: #f5f5f5;
     background-size: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: $font-primary;
     gap: 30px;
+
+
     &__img {
+
+
         display: flex;
         justify-content: center;
         width: 100vw;
         margin-top: 95px;
+
         img {
             min-width: 250px;
-           width: 75%; 
-           margin: 0 auto;
+            max-width: 419px;
+            width: 75%;
+            margin: 0 auto;
 
         }
     }
+
     &__presentation {
+
+
         h2 {
             font-family: 'Merriweather', serif;
             text-align: center;
             color: $color-warm-dark;
             font-size: 19px;
         }
+
         p {
+
             text-align: center;
             padding: 0px 28px 0px 28px;
             font-size: 13px;
             color: $color-cold-medium;
         }
     }
+
     &__icons {
         width: 268px;
         height: 74px;
@@ -64,12 +79,13 @@ body {
                 font-size: 13px;
                 color: $primary-medium;
             }
+
             i {
                 color: $color-warm-dark;
                 transform: scale(150%);
             }
         }
-       
+
     }
 
     &__button {
@@ -77,9 +93,10 @@ body {
         padding: 10px 20px;
         border-radius: 21px;
         margin-bottom: 30px;
-         a {
+
+        a {
             color: $primary-light;
-         }
+        }
     }
 }
 
@@ -90,13 +107,15 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 18px;
-        span {
+
+    span {
         font-size: 14px;
         line-height: 20px;
         color: #6b6b6b;
     }
+
     &__logo {
-       
+
         img {
             width: 103px;
             margin: 12px 0px 20px 0px;

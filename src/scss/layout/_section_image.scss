@@ -1,17 +1,18 @@
 .sectionPhoto {
     background: linear-gradient(#bfcdd0, #dde9ed);
     width: 100%;
+
 }
 
-.sectionPhotoContainer {
+.photoContainer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 50%;
     margin: 0 auto;
     padding: 40px 0;
-    max-width: 240px;
-    
+    min-width: 240px;
+
     &__button {
         border: solid 1px white;
         border-radius: 15px;
@@ -24,10 +25,11 @@
         align-self: flex-start;
         margin-top: 10px;
         margin-bottom: 20px;
+        margin-right: 150px;
 
         &--icon {
             i {
-            color:  #54585a;
+                color: #54585a;
             }
         }
 
@@ -44,18 +46,32 @@
         background-color: white;
         box-shadow: 10px 5px 5px rgb(0, 0, 0, 0.2);
 
+        &--decoration {
+            width: 5px;
+            height: 42px;
+            position: absolute;
+            transform: translateY(17px);
+            background-color: $color-cold-medium;
+        }
+
         &--text {
-            h1 {
-                color: #114e4e;
+            padding: 21px 14px 10px 20px;
+            color: $color-cold-dark;
+
+            & h2 {
                 font-size: 18px;
                 font-family: $font-secondary;
+
             }
-            span {
-                color: #54585a;
+
+            & span {
+                color: $primary-medium;
                 font-size: 16px;
-                font-family: $font-primary;
+                font-family: $font-secondary;
             }
         }
+
+
     }
 
     &__img {
@@ -71,65 +87,51 @@
         justify-content: center;
         gap: 10px;
         margin-bottom: 12px;
-        
+
+
+
         &--phone {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: solid 1px #a2deaf;
-            border-radius: 50%;
-            background-color: transparent;
             width: 32px;
             height: 32px;
-
-            i {
-                color: #114e4e
-            }
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+            color: $color-cold-dark;
         }
 
         &--email {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: solid 1px #a2deaf;
-            border-radius: 50%;
-            background-color: transparent;
             width: 32px;
             height: 32px;
-
-            i {
-                color: #114e4e
-            }
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+            color: $color-cold-dark;
         }
 
         &--linkedin {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: solid 1px #a2deaf;
-            border-radius: 50%;
-            background-color: transparent;
             width: 32px;
             height: 32px;
-
-            i {
-                color: #114e4e
-            }
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+            color: $color-cold-dark;
         }
 
         &--github {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: solid 1px #a2deaf;
-            border-radius: 50%;
-            background-color: transparent;
             width: 32px;
             height: 32px;
-
-            i {
-                color: #114e4e
-            }
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+            color: $color-cold-dark;
         }
     }
 }

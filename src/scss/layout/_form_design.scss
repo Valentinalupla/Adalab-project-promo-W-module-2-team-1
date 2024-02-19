@@ -1,7 +1,10 @@
 .fieldset {
+    min-width: 320px;
     border-color: transparent;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     padding: 0px 20px;
     gap: 22px;
 
@@ -12,8 +15,9 @@
         border-color: transparent;
         font-size: 18px;
         font-weight: 600;
+        padding-right: 130px;
 
-        i {
+        .designIcon {
             color: $color-warm-dark;
             transform: scale(85%);
 
@@ -22,13 +26,23 @@
                 content: "";
             }
         }
+
+        .iconUp {
+
+            transform: translateX(108px);
+        }
+
+        .iconDown {
+            transform: translateX(108px);
+        }
     }
 
     &__design {
         font-size: 14px;
         border-color: transparent;
         display: flex;
-        gap: 10%;
+        gap: 60px;
+        // padding-right: 100px;
 
         &--palettes {
 
@@ -99,10 +113,40 @@
                 }
             }
         }
-
-
     }
+}
+
+.collapsed {
+    display: none;
+}
+
+.changereds {
+    color: $palette-warms-dark;
+    border-color: $palette-warms-light;
+}
+
+.decoR {
+    background-color: $palette-warms-medium;
+}
+
+.changeblues {
+    color: $color-cold-dark;
+    border-color: $color-cold-light;
 
 
+}
+
+.decoB {
+    background-color: $color-cold-medium;
+}
+
+.changeneutrals {
+    color: $palette-neutrals-dark;
+    border-color: $palette-neutrals-light;
+}
+
+.decoN {
+
+    background-color: $palette-neutrals-medium;
 
 }
