@@ -14,6 +14,14 @@
         font-weight: 600;
     }
 
+    &--up {
+        transform: translateX(150px);
+    }
+
+    &--down {
+        transform: translateX(150px);
+    }
+
     &--icon {
         color: $color-warm-dark;
         &::after {
