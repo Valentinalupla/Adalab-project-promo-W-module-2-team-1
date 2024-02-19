@@ -12,6 +12,7 @@
     color: $primary-medium ;
 
     &__legend {
+        margin-top: 20px;
         border-color: transparent;
         font-size: 18px;
         font-weight: 600;
@@ -39,9 +40,11 @@
 
     &__design {
         font-size: 14px;
+
         border-color: transparent;
         display: flex;
         gap: 60px;
+
         // padding-right: 100px;
 
         &--palettes {
