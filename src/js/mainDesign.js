@@ -9,19 +9,26 @@ const downArrow = document.querySelector(".js-iconDown");
 const cardDecor = document.querySelector(".js-decorationCard");
 const cardtext = document.querySelector(".js-headerCard");
 
+const redColour = "changereds";
+const blueColour = "changeblues";
+const neutColour = "changeneutrals";
+
+const redColourdec = "decoR";
+const blueColourdec = "decoB";
+const neutColourdec = "decoN";
 
 palettes.forEach(element => {
     element.addEventListener('click', function (e) {
         if (element.value == "colours1") {
 
-            changeIconsBlue();
+            changeColours(blueColour, redColour, neutColour, blueColourdec, redColourdec, neutColourdec);
 
         } if (element.value == "colours2") {
-            changeIconsRed();
+            changeColours(redColour, blueColour, neutColour, redColourdec, blueColourdec, neutColourdec);
 
         } if (element.value == "colours3") {
+            changeColours(neutColour, redColour, blueColour, neutColourdec, redColourdec, blueColourdec);
 
-            changeIconsNeutrals();
         }
     });
 });
@@ -34,41 +41,17 @@ downArrow.addEventListener("click", () => {
     collapseDesign();
 
 });
-function changeIconsRed() {
+function changeColours(colAdd, colRem, colRem2, decAdd, decRem, decRem2) {
     icNs.forEach(icon => {
 
-        icon.classList.add("changereds");
-        icon.classList.remove("changeblues", "changeneutrals");
+        icon.classList.add(colAdd);
+        icon.classList.remove(colRem, colRem2);
     })
-    cardDecor.classList.add("decoR");
-    cardDecor.classList.remove("decoB", "decoN");
-    cardtext.classList.add("changereds");
-    cardtext.classList.remove("changeblues", "changeneutrals");
+    cardDecor.classList.add(decAdd);
+    cardDecor.classList.remove(decRem, decRem2);
+    cardtext.classList.add(colAdd);
+    cardtext.classList.remove(colRem, colRem2);
 
-}
-function changeIconsBlue() {
-    icNs.forEach(icon => {
-
-        icon.classList.add("changeblues");
-        icon.classList.remove("changereds", "changeneutrals");
-    })
-    cardDecor.classList.add("decoB");
-    cardDecor.classList.remove("decoR", "decoN");
-    cardtext.classList.add("changeblues");
-    cardtext.classList.remove("changereds", "changeneutrals");
-
-}
-function changeIconsNeutrals() {
-
-    icNs.forEach(icon => {
-
-        icon.classList.add("changeneutrals");
-        icon.classList.remove("changereds", "changeblues");
-    })
-    cardDecor.classList.add("decoN");
-    cardDecor.classList.remove("decoR", "decoB");
-    cardtext.classList.add("changeneutrals");
-    cardtext.classList.remove("changeblues", "changereds");
 }
 function setRadio() {
 
