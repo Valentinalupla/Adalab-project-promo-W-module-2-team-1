@@ -1,7 +1,7 @@
 .sectionPhoto {
     background: linear-gradient(#bfcdd0, #dde9ed);
     width: 100%;
-    
+
 }
 
 .photoContainer {
@@ -12,7 +12,7 @@
     margin: 0 auto;
     padding: 40px 0;
     min-width: 240px;
-    
+
     &__button {
         border: solid 1px white;
         border-radius: 15px;
@@ -26,7 +26,7 @@
         margin-bottom: 20px;
         &--icon {
             i {
-            color:  #54585a;
+                color: #54585a;
             }
         }
 
@@ -48,22 +48,27 @@
             height: 42px;
             position: absolute;
             transform: translateY(17px);
+            background-color: $color-cold-medium;
         }
 
         &--text {
             padding: 21px 14px 10px 20px;
-            
+            color: $color-cold-dark;
+
             & h2 {
                 font-size: 18px;
                 font-family: $font-secondary;
 
             }
-             & span {
+
+            & span {
                 color: $primary-medium;
                 font-size: 16px;
                 font-family: $font-secondary;
             }
         }
+
+
     }
 
     &__img {
@@ -79,13 +84,18 @@
         justify-content: center;
         gap: 10px;
         margin-bottom: 12px;
-        
+
+
+
         &--phone {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 32px;
             height: 32px;
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+            color: $color-cold-dark;
         }
 
         &--email {
@@ -94,6 +104,9 @@
             justify-content: center;
             width: 32px;
             height: 32px;
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+            color: $color-cold-dark;
         }
 
         &--linkedin {
@@ -102,6 +115,9 @@
             justify-content: center;
             width: 32px;
             height: 32px;
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+            color: $color-cold-dark;
         }
 
         &--github {
@@ -110,13 +126,9 @@
             justify-content: center;
             width: 32px;
             height: 32px;
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+            color: $color-cold-dark;
         }
     }
-}
-
-.align-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
 }
