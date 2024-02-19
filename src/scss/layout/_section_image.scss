@@ -126,6 +126,9 @@
             justify-content: center;
             width: 32px;
             height: 32px;
+            border: solid 1px $color-cold-light;
+            border-radius: 50%;
+            color: $color-cold-dark;
         }
     }
 }
