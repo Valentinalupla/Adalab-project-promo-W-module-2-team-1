@@ -22,11 +22,8 @@
         flex-direction: row;
         justify-content: space-between;
         gap: 5px;
-        align-self: flex-start;
         margin-top: 10px;
         margin-bottom: 20px;
-        margin-right: 150px;
-
         &--icon {
             i {
                 color: #54585a;
@@ -129,9 +126,13 @@
             justify-content: center;
             width: 32px;
             height: 32px;
-            border: solid 1px $color-cold-light;
-            border-radius: 50%;
-            color: $color-cold-dark;
         }
     }
+}
+
+.align-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
