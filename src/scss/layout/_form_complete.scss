@@ -8,6 +8,7 @@
     &__legend {
         font-size: 18px;
         font-weight: bolder;
+        padding-left: 17px;
         color: $primary-medium;
         .leyend-icon {
             color: $color-warm-dark;
@@ -17,10 +18,10 @@
             }
         }
         .arrow-up{
-            transform: translateX(100px);
+            transform: translateX(96px);
         }
         .arrow-down{
-            transform: translateX(100px);
+            transform: translateX(96px);
         }
     }
     .icons {
