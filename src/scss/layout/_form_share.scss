@@ -12,20 +12,21 @@
         border-color: transparent;
         font-size: 18px;
         font-weight: 600;
+        padding-left: 17px;
     }
 
     &--up {
-        transform: translateX(150px);
+        transform: translateX(77px);
     }
 
     &--down {
-        transform: translateX(150px);
+        transform: translateX(77px);
     }
 
     &--icon {
         color: $color-warm-dark;
         &::after {
-                margin-right: 5px;
+                margin-right: 13px;
                 content: ""; 
         }
     }
