@@ -9,31 +9,10 @@
 @import 'layout/form_complete';
 @import 'layout/form_share';
 
-/*:export {
-
-    paletteWarmsDark: $palette-warms-dark;
-    paletteWarmsMedium: $palette-warms-medium;
-    paletteWarmsLight: $palette-warms-light;
-
-    paletteNeutralsDark: $palette-neutrals-dark;
-    paletteNeutralsMedium: $palette-neutrals-medium;
-    paletteNeutralsLight: $palette-neutrals-light;
-
-    paletteColdDark: $color-cold-dark;
-    paletteColdMedium: $color-cold-medium;
-    paletteColdLight: $color-cold-light;
-
-}*/
-
 body {
     min-width: 320px;
     width: 100vw;
     height: 100vh;
-
-    main {
-        min-height: 175vh;
-        max-height: 250vh;
-    }
 
 
 }

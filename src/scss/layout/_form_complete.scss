@@ -10,6 +10,7 @@
 
     &__legend {
 
+
         font-size: 18px;
         font-weight: bolder;
         padding-left: 17px;
@@ -25,12 +26,9 @@
             }
         }
 
-        .arrow-up {
-            transform: translateX(96px);
-        }
-
+        .arrow-up,
         .arrow-down {
-            transform: translateX(96px);
+            transform: translateX(108px);
         }
     }
 

@@ -4,27 +4,25 @@
         flex-direction: column;
         align-items: center;
         padding: 0px 20px;
-        gap: 22px;
+
         font-family: $font-primary;
         color: $primary-medium ;
         min-width: 320px;
 
 
+
         &--legend {
+
                 border-color: transparent;
                 font-size: 18px;
                 font-weight: 600;
                 padding-left: 15px;
                 padding-right: 108px;
-
         }
 
-        &--up {
-                transform: translateX(77px);
-        }
-
+        &--up,
         &--down {
-                transform: translateX(77px);
+                transform: translateX(88px);
         }
 
         &--icon {
@@ -35,17 +33,18 @@
                         content: "";
                 }
         }
-
-
 }
 
 .fieldset__three--box {
+
         display: flex;
         align-items: center;
         gap: 5px;
 }
 
 .button__share {
+        margin-top: 20px;
+        margin-bottom: 20px;
         display: flex;
         justify-content: center;
 
@@ -72,8 +71,11 @@
 }
 
 .container {
+        margin-top: 10px;
+        margin-bottom: 10px;
         display: flex;
         justify-content: center;
+
 
         &__line {
                 width: 280px;
@@ -83,6 +85,7 @@
 }
 
 .profile {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -6,13 +6,12 @@
     align-items: center;
 
     padding: 0px 20px;
-    gap: 22px;
-
     font-family: $font-primary;
     color: $primary-medium ;
 
     &__legend {
         margin-top: 20px;
+
         border-color: transparent;
         font-size: 18px;
         font-weight: 600;
@@ -28,14 +27,12 @@
             }
         }
 
-        .iconUp {
-
-            transform: translateX(108px);
-        }
-
+        .iconUp,
         .iconDown {
-            transform: translateX(108px);
+
+            transform: translateX(122px);
         }
+
     }
 
     &__design {
@@ -43,7 +40,7 @@
 
         border-color: transparent;
         display: flex;
-        gap: 60px;
+        gap: 75px;
 
         // padding-right: 100px;
 
@@ -121,6 +118,7 @@
 
 .collapsed {
     display: none;
+
 }
 
 .changereds {

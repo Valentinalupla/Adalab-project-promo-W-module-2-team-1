@@ -9,10 +9,8 @@ const iconDown = document.querySelector(".js-down");
 
 function handleClickProfile() {
 
-
   linkButton.classList.add('play');
   profileCreated.classList.remove("hiden")
-
 }
 
 linkButton.addEventListener("click", (event) => {
@@ -21,14 +19,8 @@ linkButton.addEventListener("click", (event) => {
 });
 
 
-iconUp.addEventListener("click", () => {
-  hiden();
-});
-iconDown.addEventListener("click", () => {
-  console.log('click')
-  hiden();
-
-});
+iconUp.addEventListener("click", hiden);
+iconDown.addEventListener("click", hiden);
 
 function hiden() {
 

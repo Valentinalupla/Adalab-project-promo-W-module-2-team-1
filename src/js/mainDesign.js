@@ -34,13 +34,9 @@ palettes.forEach(element => {
 });
 
 
-upArrow.addEventListener("click", () => {
-    collapseDesign();
-});
-downArrow.addEventListener("click", () => {
-    collapseDesign();
+upArrow.addEventListener("click", collapseDesign);
+downArrow.addEventListener("click", collapseDesign);
 
-});
 function changeColours(colAdd, colRem, colRem2, decAdd, decRem, decRem2) {
     icNs.forEach(icon => {
 
@@ -53,12 +49,7 @@ function changeColours(colAdd, colRem, colRem2, decAdd, decRem, decRem2) {
     cardtext.classList.remove(colRem, colRem2);
 
 }
-function setRadio() {
 
-    const selectedOption = event.currentTarget;
-    selectedOption.classList.toggle("palette--selected");
-
-}
 function collapseDesign() {
 
     upArrow.classList.toggle("collapsed");
