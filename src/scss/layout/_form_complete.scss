@@ -2,82 +2,96 @@
     display: flex;
     flex-direction: column;
     border-color: transparent;
+    align-items: center;
     padding: 0 20px;
     font-family: $font-primary;
-    
+    min-width: 320px;
+
+
     &__legend {
+
+
         font-size: 18px;
         font-weight: bolder;
         padding-left: 17px;
         color: $primary-medium;
+        padding-right: 130px;
+
         .leyend-icon {
             color: $color-warm-dark;
+
             &::after {
                 margin-right: 5px;
                 content: "";
             }
         }
-        .arrow-up{
-            transform: translateX(96px);
-        }
-        .arrow-down{
-            transform: translateX(96px);
+
+        .arrow-up,
+        .arrow-down {
+            transform: translateX(108px);
         }
     }
+
     .icons {
         color: $primary-medium;
     }
-   .form_complete {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-    label {
-        
-        font-size: 14px;
-        color: $color-cold-dark;
-        padding-bottom: 7px;
-        padding-top: 7px;
+
+    .form_complete {
+        display: flex;
+        flex-direction: column;
+        min-width: 280px;
+        padding: 0 20px;
+
+        label {
+
+            font-size: 14px;
+            color: $color-cold-dark;
+            padding-bottom: 7px;
+            padding-top: 7px;
+        }
+
+        input {
+            font-size: 12px;
+            padding: 5px 10px;
+            border: 1px solid $color-cold-light;
+
+        }
     }
-    input {
-        font-size: 12px;
-        padding: 5px 10px;
-        border: 1px solid $color-cold-light;
-     
-    }
-   }
-   .form_complete_button {
+
+    .form_complete_button {
 
         padding-bottom: 7px;
         padding-top: 7px;
-    
-    div {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: left;
-        padding-top: 5px;
-         
-        input {
-            transform: translateX(30px);
-            width: 25px;
-            height: 25px;
+
+        div {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: left;
+            padding-top: 5px;
+
+            input {
+                transform: translateX(30px);
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        button {
+            font-family: $font-primary;
+            font-size: 12px;
+            color: $primary-light;
+            background-color: $color-warm-dark;
+            border: none;
+            padding: 5px 17px;
+            border-radius: 5px;
+
         }
     }
-    button {
-        font-family: $font-primary;
-        font-size: 12px;
-        color: $primary-light;
-        background-color:  $color-warm-dark;
-        border: none;
-        padding: 5px 17px;
-        border-radius: 5px;
-        
-   }
+
 }
-   
-}
+
 .hidden {
     display: none;
     visibility: hidden;
     height: 0;
 }
-

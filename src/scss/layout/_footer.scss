@@ -1,5 +1,6 @@
 .footer {
 
+
     font-family: $font-primary;
     display: flex;
     flex-direction: column;
@@ -17,6 +18,18 @@
         img {
             width: 103px;
             margin: 12px 0px 20px 0px;
+        }
+    }
+
+    .container-footer {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        &__line {
+            width: 100vw;
+            height: 1px;
+            background-color: #d8d8d8;
         }
     }
 

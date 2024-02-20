@@ -10,16 +10,12 @@ const inputNumber = document.querySelector('.js-number');
 const inputLinkedin = document.querySelector('.js-linkedin');
 const inputGit = document.querySelector('.js-git');
 
-function hiddenMenu(){
-toHiddenMenu.classList.toggle('hidden');
-arrowUP.classList.toggle('hidden');
-arrowDown.classList.toggle('hidden');
+function hiddenMenu() {
+
+    toHiddenMenu.classList.toggle('hidden');
+    arrowUP.classList.toggle('hidden');
+    arrowDown.classList.toggle('hidden');
 }
 
-arrowUP.addEventListener('click', () => {
-hiddenMenu(); 
-});
-arrowDown.addEventListener('click', () => {
-    hiddenMenu(); 
- });
- console.log(toHiddenMenu);
+arrowUP.addEventListener('click', hiddenMenu);
+arrowDown.addEventListener('click', hiddenMenu);
