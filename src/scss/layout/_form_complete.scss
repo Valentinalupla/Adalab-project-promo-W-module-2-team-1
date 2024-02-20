@@ -39,7 +39,7 @@
     .form_complete {
         display: flex;
         flex-direction: column;
-        max-width: 280px;
+        width: 288px;
         padding: 0 20px;
 
         label {
@@ -61,6 +61,7 @@
     .form_complete_button {
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         padding-bottom: 7px;
         padding-top: 7px;
@@ -75,6 +76,7 @@
                 transform: translateX(-100px);
                 max-width: 80px;
                 text-decoration: none;
+                opacity: 0%;
                 
             }
         }
@@ -88,6 +90,12 @@
             padding: 5px 17px;
             border-radius: 5px;
 
+        }
+        .image-preview-div {
+            border: 1px solid $color-cold-light;
+            width: 30px;
+            height: 30px;
+            
         }
     }
 

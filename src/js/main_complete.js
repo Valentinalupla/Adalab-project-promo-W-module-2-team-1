@@ -9,6 +9,29 @@ const inputEmail = document.querySelector('.js-email');
 const inputNumber = document.querySelector('.js-number');
 const inputLinkedin = document.querySelector('.js-linkedin');
 const inputGit = document.querySelector('.js-git');
+const cardPreviewName = document.querySelector('.js-preview-NameCard');
+const cardPreviewJob = document.querySelector('.js-preview-JobCard');
+
+
+
+
+function liveEvent() {
+  cardPreviewName.innerHTML = inputName.value; 
+  cardPreviewJob.innerHTML = inputJob.value; 
+}
+
+inputName.addEventListener('input', liveEvent);
+
+
+
+
+
+
+
+
+
+
+
 
 function hiddenMenu() {
 
