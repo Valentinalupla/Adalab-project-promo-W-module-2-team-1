@@ -39,7 +39,7 @@
     .form_complete {
         display: flex;
         flex-direction: column;
-        min-width: 280px;
+        max-width: 280px;
         padding: 0 20px;
 
         label {
@@ -59,24 +59,27 @@
     }
 
     .form_complete_button {
+        display: flex;
+        flex-direction: row;
 
         padding-bottom: 7px;
         padding-top: 7px;
 
         div {
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: row;
             justify-content: left;
             padding-top: 5px;
 
             input {
-                transform: translateX(30px);
-                width: 25px;
-                height: 25px;
+                transform: translateX(-100px);
+                max-width: 80px;
+                text-decoration: none;
+                
             }
         }
 
-        button {
+        .button {
             font-family: $font-primary;
             font-size: 12px;
             color: $primary-light;
