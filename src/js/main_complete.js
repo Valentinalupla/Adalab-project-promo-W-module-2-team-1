@@ -16,11 +16,12 @@ const cardPreviewJob = document.querySelector('.js-preview-JobCard');
 
 
 function liveEvent() {
-  cardPreviewName.innerHTML = inputName.value; 
-  cardPreviewJob.innerHTML = inputJob.value; 
+  cardPreviewName.innerHTML = inputName.value;
+  cardPreviewJob.innerHTML = inputJob.value;
 }
 
 inputName.addEventListener('input', liveEvent);
+inputJob.addEventListener('input', liveEvent);
 
 
 
@@ -35,9 +36,9 @@ inputName.addEventListener('input', liveEvent);
 
 function hiddenMenu() {
 
-    toHiddenMenu.classList.toggle('hidden');
-    arrowUP.classList.toggle('hidden');
-    arrowDown.classList.toggle('hidden');
+  toHiddenMenu.classList.toggle('hidden');
+  arrowUP.classList.toggle('hidden');
+  arrowDown.classList.toggle('hidden');
 }
 
 arrowUP.addEventListener('click', hiddenMenu);
