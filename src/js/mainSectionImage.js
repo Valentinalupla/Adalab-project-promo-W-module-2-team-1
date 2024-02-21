@@ -8,6 +8,7 @@ const formInformationUser = document.querySelectorAll('input');
 const defaultNameCard = document.querySelector('.js-preview-NameCard');
 const defaultJobCard = document.querySelector('.js-preview-JobCard');
 const resetButton = document.querySelector('.js-button-reset');
+const uploadProfileImage = document.querySelector('.js__profile-image');
 
 const resetCLassIcon = () => {
   selectedIcons.forEach((icon) => {
@@ -23,6 +24,10 @@ const resetRadioButtons = () => {
   }
 };
 
+const resetProfileImage = () => {
+  uploadProfileImage.style.backgroundImage = '';
+};
+
 const resetTextCard = () => {
   for (const textCard of formInformationUser) {
     textCard.value = textCard.defaultValue;
@@ -35,6 +40,7 @@ const handleReset = () => {
   resetCLassIcon();
   resetRadioButtons();
   resetTextCard();
+  resetProfileImage();
 };
 
 resetButton.addEventListener('click', handleReset);
