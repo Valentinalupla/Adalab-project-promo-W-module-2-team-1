@@ -45,8 +45,8 @@ fileField.addEventListener('change', getImage);
 //código Valentina
 
 function liveEvent() {
-  cardPreviewName.innerHTML = inputName.value; 
-  cardPreviewJob.innerHTML = inputJob.value; 
+  cardPreviewName.innerHTML = inputName.value;
+  cardPreviewJob.innerHTML = inputJob.value;
 }
 
 inputName.addEventListener('input', liveEvent);
@@ -55,9 +55,9 @@ inputJob.addEventListener('input', liveEvent);
 
 function hiddenMenu() {
 
-    toHiddenMenu.classList.toggle('hidden');
-    arrowUP.classList.toggle('hidden');
-    arrowDown.classList.toggle('hidden');
+  toHiddenMenu.classList.toggle('hidden');
+  arrowUP.classList.toggle('hidden');
+  arrowDown.classList.toggle('hidden');
 }
 
 arrowUP.addEventListener('click', hiddenMenu);
