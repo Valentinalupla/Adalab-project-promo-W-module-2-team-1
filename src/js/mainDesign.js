@@ -17,25 +17,10 @@ const redColourdec = "decoR";
 const blueColourdec = "decoB";
 const neutColourdec = "decoN";
 
-palettes.forEach(element => {
-    element.addEventListener('click', function (e) {
-        if (element.value == "colours1") {
-
-            changeColours(blueColour, redColour, neutColour, blueColourdec, redColourdec, neutColourdec);
-
-        } if (element.value == "colours2") {
-            changeColours(redColour, blueColour, neutColour, redColourdec, blueColourdec, neutColourdec);
-
-        } if (element.value == "colours3") {
-            changeColours(neutColour, redColour, blueColour, neutColourdec, redColourdec, blueColourdec);
-
-        }
-    });
-});
-
-
 upArrow.addEventListener("click", collapseDesign);
 downArrow.addEventListener("click", collapseDesign);
+
+changePalettes();
 
 function changeColours(colAdd, colRem, colRem2, decAdd, decRem, decRem2) {
     icNs.forEach(icon => {
@@ -57,7 +42,24 @@ function collapseDesign() {
     toCollapseMenu.classList.toggle("collapsed");
 }
 
+function changePalettes() {
 
+    palettes.forEach(element => {
+        element.addEventListener('click', () => {
+            if (element.value == "colours1") {
+
+                changeColours(blueColour, redColour, neutColour, blueColourdec, redColourdec, neutColourdec);
+
+            } if (element.value == "colours2") {
+                changeColours(redColour, blueColour, neutColour, redColourdec, blueColourdec, neutColourdec);
+
+            } if (element.value == "colours3") {
+                changeColours(neutColour, redColour, blueColour, neutColourdec, redColourdec, blueColourdec);
+
+            }
+        });
+    });
+}
 
 
 
