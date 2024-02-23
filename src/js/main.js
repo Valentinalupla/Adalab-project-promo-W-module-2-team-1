@@ -11,30 +11,43 @@ const leyend = document.querySelectorAll('.js-leyends');
 
 const toCollapseMenu = document.querySelectorAll('.js-collapsedArea');
 
-console.log(toCollapseMenu[0]);
 
-function collapseMenu () {
-   
-    toCollapseMenu.forEach(menu => {
-        
-        menu.classList.toggle('collapsed');
-     });
-     arrowUP.forEach(up => {
-        up.classList.toggle('collapsed');
-       
-     });
-     arrowDown.forEach(down => {
-        down.classList.toggle('collapsed');
-    
-     });
-    
+//función con parámetros para cada [] de los Arrays
+function toggleSections(sec1, sec2, sec3) {
+
+   toCollapseMenu[sec1].classList.toggle("collapsed");
+   arrowUP[sec1].classList.toggle("collapsed");
+   arrowDown[sec1].classList.toggle("collapsed");
+
+   toCollapseMenu[sec2].classList.add("collapsed");
+   toCollapseMenu[sec3].classList.add("collapsed");
+
 }
 
-leyend[0].addEventListener('click', collapseMenu);
+//forEach con cada una de las leyendas que distingue mediante su posisción en el array [] y aplica 
+//la función toggleSections con los respectivos parámetros para ocultar las demás secciones.
+
+leyend.forEach(section => {
+
+   section.addEventListener('click', () => {
+
+      if (section == leyend[0]) {
+
+         toggleSections(0, 1, 2);
+
+      } else if (section == leyend[1]) {
+
+         toggleSections(1, 0, 2);
+
+      } else if (section == leyend[2]) {
+
+         toggleSections(2, 0, 1);
+      }
+
+   })
+
+})
 
 
 
-// leyend.forEach(section => {
-//     section.addEventListener('click', collapseMenu);
-    
-// })
+
