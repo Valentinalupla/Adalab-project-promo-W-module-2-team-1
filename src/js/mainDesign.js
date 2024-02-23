@@ -2,9 +2,9 @@
 const palettes = document.querySelectorAll(".inputpal");
 const icNs = document.querySelectorAll(".js-icons");
 
-const toCollapseMenu = document.querySelector(".fieldset__design");
-const upArrow = document.querySelector(".js-iconUp");
-const downArrow = document.querySelector(".js-iconDown");
+// const toCollapseMenu = document.querySelector(".fieldset__design");
+// const upArrow = document.querySelector(".js-iconUp");
+// const downArrow = document.querySelector(".js-iconDown");
 
 const cardDecor = document.querySelector(".js-decorationCard");
 const cardtext = document.querySelector(".js-headerCard");
@@ -34,8 +34,8 @@ palettes.forEach(element => {
 });
 
 
-upArrow.addEventListener("click", collapseDesign);
-downArrow.addEventListener("click", collapseDesign);
+// upArrow.addEventListener("click", collapseDesign);
+// downArrow.addEventListener("click", collapseDesign);
 
 function changeColours(colAdd, colRem, colRem2, decAdd, decRem, decRem2) {
     icNs.forEach(icon => {
@@ -50,12 +50,12 @@ function changeColours(colAdd, colRem, colRem2, decAdd, decRem, decRem2) {
 
 }
 
-function collapseDesign() {
+// function collapseDesign() {
 
-    upArrow.classList.toggle("collapsed");
-    downArrow.classList.toggle("collapsed");
-    toCollapseMenu.classList.toggle("collapsed");
-}
+//     upArrow.classList.toggle("collapsed");
+//     downArrow.classList.toggle("collapsed");
+//     toCollapseMenu.classList.toggle("collapsed");
+// }
 
 
 
