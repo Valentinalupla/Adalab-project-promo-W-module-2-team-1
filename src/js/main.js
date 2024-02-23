@@ -30,7 +30,8 @@ function collapseMenu () {
     
 }
 
-// leyend[0]
+leyend[0].addEventListener('click', collapseMenu);
+
 
 
 // leyend.forEach(section => {
