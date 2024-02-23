@@ -43,8 +43,7 @@
 }
 
 .button__share {
-        margin-top: 20px;
-        margin-bottom: 20px;
+
         display: flex;
         justify-content: center;
 
@@ -59,6 +58,9 @@
         }
 
         &--content {
+
+                margin-top: 20px;
+                margin-bottom: 20px;
                 font-size: 18px;
                 background-color: $color-warm-dark;
                 color: $primary-light;
