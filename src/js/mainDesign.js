@@ -1,21 +1,13 @@
+"use strict"
 
 const palettes = document.querySelectorAll(".inputpal");
 const icNs = document.querySelectorAll(".js-icons");
 
 const toCollapseMenu = document.querySelector(".fieldset__design");
-const upArrow = document.querySelector(".js-iconUp");
-const downArrow = document.querySelector(".js-iconDown");
 
-const cardDecor = document.querySelector(".js-decorationCard");
-const cardtext = document.querySelector(".js-headerCard");
+const [upArrow, downArrow] = document.querySelectorAll(".js-iconUp, .js-iconDown");
+const [cardDecor, cardtext] = document.querySelectorAll(".js-decorationCard, .js-headerCard");
 
-const redColour = "changereds";
-const blueColour = "changeblues";
-const neutColour = "changeneutrals";
-
-const redColourdec = "decoR";
-const blueColourdec = "decoB";
-const neutColourdec = "decoN";
 
 upArrow.addEventListener("click", collapseDesign);
 downArrow.addEventListener("click", collapseDesign);
@@ -48,13 +40,13 @@ function changePalettes() {
         element.addEventListener('click', () => {
             if (element.value == "colours1") {
 
-                changeColours(blueColour, redColour, neutColour, blueColourdec, redColourdec, neutColourdec);
+                changeColours("changeblues", "changereds", "changeneutrals", "decoB", "decoR", "decoN");
 
             } if (element.value == "colours2") {
-                changeColours(redColour, blueColour, neutColour, redColourdec, blueColourdec, neutColourdec);
+                changeColours("changereds", "changeblues", "changeneutrals", "decoR", "decoB", "decoN");
 
             } if (element.value == "colours3") {
-                changeColours(neutColour, redColour, blueColour, neutColourdec, redColourdec, blueColourdec);
+                changeColours("changeneutrals", "changereds", "changeblues", "decoN", "decoR", "decoB");
 
             }
         });

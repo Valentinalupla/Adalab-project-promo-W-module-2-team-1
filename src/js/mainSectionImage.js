@@ -1,39 +1,41 @@
 'use strict';
 
-const selectedIcons = document.querySelectorAll('.js-icons');
-const cardDecoration = document.querySelector('.js-decorationCard');
-const cardText = document.querySelector('.js-headerCard');
-const formRadioButtons = document.querySelectorAll('.inputpal');
-const formInformationUser = document.querySelectorAll('input');
-const defaultNameCard = document.querySelector('.js-preview-NameCard');
-const defaultJobCard = document.querySelector('.js-preview-JobCard');
-const resetButton = document.querySelector('.js-button-reset');
-const uploadProfileImage = document.querySelector('.js__profile-image');
+const elements = {
+  selectedIcons: document.querySelectorAll('.js-icons'),
+  cardDecoration: document.querySelector('.js-decorationCard'),
+  cardText: document.querySelector('.js-headerCard'),
+  formRadioButtons: document.querySelectorAll('.inputpal'),
+  formInformationUser: document.querySelectorAll('input'),
+  defaultNameCard: document.querySelector('.js-preview-NameCard'),
+  defaultJobCard: document.querySelector('.js-preview-JobCard'),
+  resetButton: document.querySelector('.js-button-reset'),
+  uploadProfileImage: document.querySelector('.js__profile-image')
+};
 
 const resetCLassIcon = () => {
-  selectedIcons.forEach((icon) => {
+  elements.selectedIcons.forEach(icon => {
     icon.classList.remove('changereds', 'changeblues', 'changeneutrals');
   });
-  cardText.classList.remove('changereds', 'changeblues', 'changeneutrals');
-  cardDecoration.classList.remove('decoR', 'decoB', 'decoN');
+  elements.cardText.classList.remove('changereds', 'changeblues', 'changeneutrals');
+  elements.cardDecoration.classList.remove('decoR', 'decoB', 'decoN');
 };
 
 const resetRadioButtons = () => {
-  for (const button of formRadioButtons) {
+  elements.formRadioButtons.forEach(button => {
     button.checked = false;
-  }
+  });
 };
 
 const resetProfileImage = () => {
-  uploadProfileImage.style.backgroundImage = '';
+  elements.uploadProfileImage.style.backgroundImage = '';
 };
 
 const resetTextCard = () => {
-  for (const textCard of formInformationUser) {
+  elements.formInformationUser.forEach(textCard => {
     textCard.value = textCard.defaultValue;
-  }
-  defaultNameCard.innerHTML = 'Nombre Apellido';
-  defaultJobCard.innerHTML = 'Front-end developer';
+  });
+  elements.defaultNameCard.innerHTML = 'Nombre Apellido';
+  elements.defaultJobCard.innerHTML = 'Front-end developer';
 };
 
 const handleReset = () => {
@@ -43,4 +45,4 @@ const handleReset = () => {
   resetProfileImage();
 };
 
-resetButton.addEventListener('click', handleReset);
+elements.resetButton.addEventListener('click', handleReset);

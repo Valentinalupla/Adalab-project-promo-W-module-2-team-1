@@ -14,5 +14,63 @@ body {
     width: 100vw;
     height: 100vh;
 
+}
+
+@media all and (min-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-width: 768px;
+
+
+        header {
+            width: 100vw;
+            display: flex;
+            justify-content: left;
+            margin-left: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            //gap: 10px;
+
+            .sectionPhoto {
+                background: linear-gradient(#bfcdd0, #dde9ed);
+                width: 40%;
+                //max-width: 329px;
+
+            }
+        }
+
+        form {
+            margin-left: -60px;
+            width: 50%;
+            //max-width: 400px;
+        }
+
+        .footer {
+
+            margin-left: 60px;
+
+            .itemsFooter {
+
+                display: flex;
+                flex-direction: row;
+                align-items: start;
+                //justify-content: space-between;
+                gap: 350px;
+
+
+            }
+
+        }
+
+    }
+
 
 }
+
+@media all and (min-width: 1280px) {}
