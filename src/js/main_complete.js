@@ -1,7 +1,5 @@
 'use strict'
-// const toHiddenMenu = document.querySelector(".js-two");
-// const arrowUP = document.querySelector(".js-arrow-up");
-// const arrowDown = document.querySelector(".js-arrow-down");
+
 const inputName = document.querySelector('.js-name');
 const inputJob = document.querySelector('.js-job');
 const inputImage = document.querySelector('.js-photo');
@@ -23,7 +21,7 @@ const profilePreview = document.querySelector('.js__profile-preview');
 
  * @param {evento} e 
  */
-function getImage(e){
+function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
@@ -52,13 +50,3 @@ function liveEvent() {
 inputName.addEventListener('input', liveEvent);
 inputJob.addEventListener('input', liveEvent);
 
-
-// function hiddenMenu() {
-
-//   toHiddenMenu.classList.toggle('hidden');
-//   arrowUP.classList.toggle('hidden');
-//   arrowDown.classList.toggle('hidden');
-// }
-
-// arrowUP.addEventListener('click', hiddenMenu);
-// arrowDown.addEventListener('click', hiddenMenu);

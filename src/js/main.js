@@ -33,7 +33,7 @@ leyend.forEach(section => {
 
       if (section == leyend[0]) {
 
-         toggleSections(0, 1, 2);
+         toggleSections(0, 1, 2); //realiza toggle de [0] y oculta [1] y [2]
 
       } else if (section == leyend[1]) {
 
