@@ -11,11 +11,14 @@
 
     &__legend {
         margin-top: 20px;
-
         border-color: transparent;
         font-size: 18px;
         font-weight: 600;
         padding-right: 130px;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         .designIcon {
             color: $color-warm-dark;
@@ -37,7 +40,7 @@
 
     &__design {
         font-size: 14px;
-
+        margin-top: 20px;
         border-color: transparent;
         display: flex;
         gap: 75px;

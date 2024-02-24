@@ -3,10 +3,6 @@
 const profileCreated = document.querySelector('.js-profile');
 const linkButton = document.querySelector('.js-button');
 
-// const hidenMenu = document.querySelector(".js-collapsedBotton");
-// const iconUp = document.querySelector(".js-up");
-// const iconDown = document.querySelector(".js-down");
-
 function handleClickProfile() {
 
   linkButton.classList.add('play');
@@ -17,10 +13,6 @@ linkButton.addEventListener("click", (event) => {
   event.preventDefault();
   handleClickProfile()
 });
-
-
-// iconUp.addEventListener("click", hiden);
-// iconDown.addEventListener("click", hiden);
 
 // function hiden() {
 
