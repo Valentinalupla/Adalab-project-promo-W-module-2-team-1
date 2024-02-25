@@ -9,6 +9,7 @@ const defaultNameCard = document.querySelector('.js-preview-NameCard');
 const defaultJobCard = document.querySelector('.js-preview-JobCard');
 const resetButton = document.querySelector('.js-button-reset');
 const uploadProfileImage = document.querySelector('.js__profile-image');
+const littleProfileImage = document.querySelector('.js__profile-preview');
 const inputEmail = document.querySelector('.js-email');
 const inputNumber = document.querySelector('.js-number');
 const inputLinkedin = document.querySelector('.js-linkedin');
@@ -30,20 +31,22 @@ const resetTextCard = () => {
 
 const resetProfileImage = () => {
   uploadProfileImage.style.backgroundImage = '';
+  littleProfileImage.style.backgroundImage = '';
 };
 
 // Resetear formulario
 
 const resetRadioButtons = () => {
-  for (const button of formRadioButtons) {
+  formRadioButtons.forEach((button) => {
     button.checked = false;
-  }
+  });
 };
 
 const resetInputsForm = () => {
-  for (const textCard of formInformationUser) {
+  formInformationUser.forEach((textCard) => {
     textCard.value = textCard.defaultValue;
-  }
+  });
+
   inputEmail.value = '';
   inputNumber.value = '';
   inputLinkedin.value = '';
