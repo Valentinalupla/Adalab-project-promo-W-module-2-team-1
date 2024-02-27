@@ -72,18 +72,3 @@ resetButton.addEventListener('click', handleReset);
 
 // AÑADIR URLS A LOS ICONO - PASAR AL JS DE VALENTINA CUANDO LO VEAMOS TODAS PARA QUE ESTÉN LOS INPUTS LLAMADOS SOLO EN UN JS Y NO EN DOS
 
-function updateLinkContent() {
-  const iconEmail = document.querySelector('.js-linkEmail');
-  iconEmail.href = 'mailto:' + inputEmail.value;
-  const iconPhone = document.querySelector('.js-linkPhone');
-  iconPhone.href = 'tel:' + inputNumber.value;
-  const iconLiknedin = document.querySelector('.js-linkLinkedIn');
-  iconLiknedin.href = inputLinkedin.value;
-  const iconGit = document.querySelector('.js-linkGitHub');
-  iconGit.href = inputGit.value;
-}
-
-inputEmail.addEventListener('input', updateLinkContent);
-inputNumber.addEventListener('input', updateLinkContent);
-inputLinkedin.addEventListener('input', updateLinkContent);
-inputGit.addEventListener('input', updateLinkContent);
