@@ -3,6 +3,11 @@ header {
     display: flex;
     justify-content: center;
     min-width: 320px;
+    
+    @media (min-width: 768px){
+        display: flex;
+        justify-content: flex-start;
+        }
 
     figure {
         padding: 31px 79px 31px 40px;

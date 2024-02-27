@@ -1,6 +1,12 @@
 .sectionPhoto {
     background: linear-gradient(#bfcdd0, #dde9ed);
     width: 100%;
+   
+    @media (min-width: 768px){
+        margin: 23px 40px 21px 30px;
+        border-radius: 6px;
+        padding: 125px 45px 160px 45px;
+        }
 
 }
 
