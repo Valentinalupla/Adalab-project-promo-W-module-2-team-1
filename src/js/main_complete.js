@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const inputName = document.querySelector('.js-name');
 const inputJob = document.querySelector('.js-job');
@@ -16,7 +16,6 @@ const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
-
 /**
 
  * @param {evento} e 
@@ -27,18 +26,12 @@ function getImage(e) {
   fr.readAsDataURL(myFile);
 }
 
-
-
 function writeImage() {
-
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 }
 
-
-
 fileField.addEventListener('change', getImage);
-
 
 //código Valentina
 
@@ -50,3 +43,18 @@ function liveEvent() {
 inputName.addEventListener('input', liveEvent);
 inputJob.addEventListener('input', liveEvent);
 
+function updateLinkContent() {
+  const iconEmail = document.querySelector('.js-linkEmail');
+  iconEmail.href = 'mailto:' + inputEmail.value;
+  const iconPhone = document.querySelector('.js-linkPhone');
+  iconPhone.href = 'tel:' + inputNumber.value;
+  const iconLiknedin = document.querySelector('.js-linkLinkedIn');
+  iconLiknedin.href = inputLinkedin.value;
+  const iconGit = document.querySelector('.js-linkGitHub');
+  iconGit.href = inputGit.value;
+}
+
+inputEmail.addEventListener('input', updateLinkContent);
+inputNumber.addEventListener('input', updateLinkContent);
+inputLinkedin.addEventListener('input', updateLinkContent);
+inputGit.addEventListener('input', updateLinkContent);
