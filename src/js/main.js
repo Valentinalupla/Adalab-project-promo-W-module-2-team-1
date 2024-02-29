@@ -6,4 +6,3 @@ import './mainSectionImage.js';
 import './share.js';
 import './collapsed.js';
 
-console.log(inputName);

@@ -10,10 +10,7 @@ const defaultJobCard = document.querySelector('.js-preview-JobCard');
 const resetButton = document.querySelector('.js-button-reset');
 const uploadProfileImage = document.querySelector('.js__profile-image');
 const littleProfileImage = document.querySelector('.js__profile-preview');
-const inputEmail = document.querySelector('.js-email');
-const inputNumber = document.querySelector('.js-number');
-const inputLinkedin = document.querySelector('.js-linkedin');
-const inputGit = document.querySelector('.js-git');
+
 
 // Resetear tarjeta
 const resetCLassIcon = () => {

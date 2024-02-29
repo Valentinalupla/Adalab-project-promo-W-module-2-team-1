@@ -10,16 +10,7 @@ const inputGit = document.querySelector('.js-git');
 const cardPreviewName = document.querySelector('.js-preview-NameCard');
 const cardPreviewJob = document.querySelector('.js-preview-JobCard');
 
-const FormData = {
-  palette: null,
-  name: "",
-  job: "",
-  phone: "",
-  email: "",
-  linkedin: "",
-  github: "",
-  photo: ""
-}
+
 
 //código img
 const fr = new FileReader();
