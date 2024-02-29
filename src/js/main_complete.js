@@ -10,6 +10,17 @@ const inputGit = document.querySelector('.js-git');
 const cardPreviewName = document.querySelector('.js-preview-NameCard');
 const cardPreviewJob = document.querySelector('.js-preview-JobCard');
 
+const FormData = {
+  palette: null,
+  name: "",
+  job: "",
+  phone: "",
+  email: "",
+  linkedin: "",
+  github: "",
+  photo: ""
+}
+
 //código img
 const fr = new FileReader();
 const fileField = document.querySelector('.js__profile-upload-btn');
@@ -36,6 +47,7 @@ fileField.addEventListener('change', getImage);
 //código Valentina
 
 function liveEvent() {
+
   cardPreviewName.innerHTML = inputName.value;
   cardPreviewJob.innerHTML = inputJob.value;
 }
