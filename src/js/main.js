@@ -10,33 +10,41 @@ const leyend = document.querySelectorAll('.js-leyends');
 const toCollapseMenu = document.querySelectorAll('.js-collapsedArea');
 
 
-//función con parámetros para cada [] de los Arrays
-function toggleSections(sec1, sec2, sec3) {
-
-   toCollapseMenu[sec1].classList.toggle("collapsed");
-   arrowUP[sec1].classList.toggle("collapsed");
-   arrowDown[sec1].classList.toggle("collapsed");
-
-   toCollapseMenu[sec2].classList.add("collapsed");
-   toCollapseMenu[sec3].classList.add("collapsed");
-}
-
-//forEach con cada una de las leyendas que distingue mediante su posisción en el array [] y aplica 
-//la función toggleSections con los respectivos parámetros para ocultar las demás secciones.
-
 leyend.forEach(section => {
-   section.addEventListener('click', () => {
+   section.addEventListener('click', handleCollapsables)
+})
 
-      switch (section) {
-         case leyend[0]:
-            toggleSections(0, 1, 2); //realiza toggle de [0] y oculta [1] y [2]
-            break;
-         case leyend[1]:
-            toggleSections(1, 0, 2);
-            break;
-         case leyend[2]:
-            toggleSections(2, 0, 1);
-            break;
+//Para que funcione esto hay que modificar todo el html 
+function handleCollapsables(event) {
+   const clickedHeader = event.currentTarget;
+   const clickedSection = (clickedHeader.nextSibling).nextSibling;
+
+   const clickedArrowUp = (clickedHeader.childNodes[1]).childNodes[3];
+   const clickedArrowDown = (clickedHeader.childNodes[1]).childNodes[5];
+
+   console.log((clickedHeader.childNodes[1]).childNodes[3]);
+
+   arrowUP.forEach(arrow => {
+
+      if (arrow === clickedArrowUp) {
+         arrow.classList.remove("collapsed");
       }
    })
-})
+   arrowDown.forEach(arrow => {
+
+      if (arrow === clickedArrowDown) {
+         arrow.classList.add("collapsed");
+      }
+   })
+
+   toCollapseMenu.forEach(menu => {
+
+      if (menu === clickedSection) {
+         menu.classList.remove("collapsed")
+
+      } else {
+         menu.classList.add("collapsed")
+      }
+   })
+
+}
