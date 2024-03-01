@@ -4,20 +4,21 @@
 const profileCreated = document.querySelector('.js-profile');
 const linkButton = document.querySelector('.js-button');
 
-const FormData = {
+const formData = {
   palette: null,
-  name: "",
-  job: "",
-  phone: "",
-  email: "",
-  linkedin: "",
-  github: "",
-  photo: ""
-}
+  name: inputName.value,
+  job: inputJob.value,
+  phone: inputNumber.value,
+  email: inputEmail.value,
+  linkedin: inputLinkedin.value,
+  github: inputGit.value,
+  photo: fr.result,
+// }
+//  localStorage.setItem('savedData', JSON.stringify(formData));
 
 function handleClickProfile(event) {
   event.preventDefault();
-  
+
   // fetch('https://dev.adalab.es/api/card/', {
   //   method: 'POST',
   //   body: JSON.stringify(formData), 
