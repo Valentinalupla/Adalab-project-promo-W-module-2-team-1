@@ -3,12 +3,16 @@
 
 const profileCreated = document.querySelector('.js-profile');
 const linkButton = document.querySelector('.js-button');
+const linkSpace = document.querySelector('.profile__link');
+
+let formData;
+
+
+const savedImage = localStorage.getItem('savedImage');
+const savedDataJSON = localStorage.getItem('savedData');
+
 
 window.addEventListener('DOMContentLoaded', function () {
-
-  const savedImage = localStorage.getItem('savedImage');
-  const savedDataJSON = localStorage.getItem('savedData');
-
 
   if (savedImage) {
 
@@ -37,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     } if (savedData.job === "") {
 
-      cardPreviewJob.innerHTML = "Front-End Developer"; {
+      cardPreviewJob.innerHTML = "Front-end Developer"; {
       }
     } else {
 
@@ -49,15 +53,16 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 document.body.addEventListener('click', function (event) {
-  const formData = {
+  formData = {
 
-
+    palette: selectedPalette,
     name: inputName.value,
     job: inputJob.value,
     phone: inputNumber.value,
     email: inputEmail.value,
     linkedin: inputLinkedin.value,
     github: inputGit.value,
+    photo: savedImage,
 
   }
 
@@ -66,15 +71,19 @@ document.body.addEventListener('click', function (event) {
 });
 function handleClickProfile(event) {
   event.preventDefault();
-  // fetch('https://dev.adalab.es/api/card/', {
-  //   method: 'POST',
-  //   body: JSON.stringify(formData), 
-  //   headers: {'Content-type': 'application/json'}
-  // }).then((response) => response.json())
-  //   // .then(data  => {
-  //   //   // let dataToString = data;  
-  //   // })
+  fetch('https://dev.adalab.es/api/card/', {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers: { 'Content-type': 'application/json' }
+  }).then((response) => response.json())
+    .then(data => {
 
+      console.log('Respuesta del servidor:', data);
+      linkSpace.innerHTML = `<a href="${data.cardURL}"target="_blank">${data.cardURL}</a>`;
+      console.log(data.cardURL);
+
+
+    })
 
   linkButton.classList.add('play');
   profileCreated.classList.remove("hiden")

@@ -54,6 +54,7 @@ const resetCard = () => {
   resetProfileImage();
   resetTextCard();
   resetCLassIcon();
+  localStorage.removeItem('savedImage');
 };
 const resetForm = () => {
   resetRadioButtons();

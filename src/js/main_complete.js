@@ -26,13 +26,16 @@ function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
+
 }
 
 function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
   localStorage.setItem('savedImage', fr.result);
+
 }
+
 
 fileField.addEventListener('change', getImage);
 
@@ -62,3 +65,5 @@ inputEmail.addEventListener('input', updateLinkContent);
 inputNumber.addEventListener('input', updateLinkContent);
 inputLinkedin.addEventListener('input', updateLinkContent);
 inputGit.addEventListener('input', updateLinkContent);
+
+//
