@@ -1,216 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome cards</title>
-    <script
-      src="https://kit.fontawesome.com/81f7d3236c.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
-      rel="stylesheet"
-    />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/81f7d3236c.js" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="./assets/index-dd5c8fef.css">
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/index-97ea03e2.css">
+</head>
 
-  <body>
-    <header>
-<figure>
-    <img src="images/logo-awesome-profile-cards.svg" alt="">
-</figure>
-</header>
-    <main class="container">
-      <section class="js-sectionPhoto sectionPhoto paletteOne">
-  <div class="photoContainer">
-    <div class="alignCardItems">
-      <button class="photoContainer__button js-button-reset">
-        <div class="photoContainer__button--icon">
-          <i class="fa-regular fa-trash-can trashCan"></i>
+<body>
+    <main class="main">
+        <figure class="main__img">
+            <img src="./images/logo-awesome-profile-cards.svg" alt="Esto es una tarjeta">
+        </figure>
+        <div class="main__presentation">
+            <h2>Crea tu tarjeta de visita</h2>
+            <p>Crea mejores contactos profesionales de forma fácil y cómoda</p>
         </div>
-        <div class="photoContainer__button--reset">RESET</div>
-      </button>
-      <div class="photoContainer__card">
-        <div class="photoContainer__card--decoration js-decorationCard"></div>
-        <div class="photoContainer__card--text js-textCard">
-          <h2 class="headerCard js-headerCard js-preview-NameCard">
-            Nombre Apellido
-          </h2>
-          <span class="js-preview-JobCard">Front-end developer</span>
+        <div class="main__icons">
+            <div>
+                <i class="fa-regular fa-object-ungroup"></i>
+                <span>Diseña</span>
+            </div>
+
+            <div>
+                <i class="fa-regular fa-keyboard"></i>
+                <span>Rellena</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>Comparte</span>
+            </div>
+
         </div>
-        <figure class="photoContainer__img js__profile-image"></figure>
-        <div class="photoContainer__icons">
-          <div
-            class="photoContainer__icons--phone js-containerIconCard imgIc1 js-icons"
-          >
-            <a href="tel:" class="js-linkPhone anchorIcon">
-              <i
-                class="fa-solid fa-mobile-screen-button js-iconCard iconCard"
-              ></i>
-            </a>
-          </div>
-          <div
-            class="photoContainer__icons--email js-containerIconCard imgIc2 js-icons"
-          >
-            <a href="mailto:" class="js-linkEmail anchorIcon">
-              <i class="fa-regular fa-envelope js-iconCard iconCard"></i>
-            </a>
-          </div>
-          <div
-            class="photoContainer__icons--linkedin js-containerIconCard imgIc3 js-icons"
-          >
-            <a href="#" class="js-linkLinkedIn anchorIcon">
-              <i class="fa-brands fa-linkedin-in js-iconCard iconCard"></i>
-            </a>
-          </div>
-          <div
-            class="photoContainer__icons--github js-containerIconCard imgIc4 js-icons"
-          >
-            <a href="#" class="js-linkGitHub anchorIcon">
-              <i class="fa-brands fa-github-alt js-iconCard iconCard"></i>
-            </a>
-          </div>
+
+        <div class="main__button">
+            <a href="landing1.html">COMENZAR</a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-      <form action="" class="form">
-    <fieldset class="fieldset">
-  <section class="fieldset__legend js-leyends">
-    <legend class=" ">
-      <i class="fa-regular fa-object-ungroup designIcon "> </i>
-      DISEÑA
-      <i class="fa-solid fa-chevron-up iconUp js-arrow-up  collapsed"> </i>
-      <i class="fa-solid fa-chevron-down iconDown js-arrow-down"> </i>
-    </legend>
-  </section>
-  <section class="fieldset__design collapsed js-collapsedArea">
-    <label for="">COLORES</label>
-
-    <section class="fieldset__design--palettes">
-      <div class="palette-1">
-        <input type="radio" value="colours1" name="colourPalette" class="inputpal" checked />
-        <div class="palette-1__colour1"></div>
-        <div class="palette-1__colour2"></div>
-        <div class="palette-1__colour3"></div>
-      </div>
-
-      <div class="palette-2">
-        <input type="radio" value="colours2" name="colourPalette" class="inputpal" />
-        <div class="palette-2__colour1"></div>
-        <div class="palette-2__colour2"></div>
-        <div class="palette-2__colour3"></div>
-      </div>
-
-      <div class="palette-3">
-        <input type="radio" value="colours3" name="colourPalette" class="inputpal" />
-        <div class="palette-3__colour1"></div>
-        <div class="palette-3__colour2"></div>
-        <div class="palette-3__colour3"></div>
-      </div>
-    </section>
-  </section>
-
-  </section>
-  <div class="container">
-    <span class="container__line"></span>
-  </div>
-</fieldset>
-
-
-</fieldset>
-    <fieldset class="fieldset_two">
-  <div class="js-leyends">
-    <legend class="fieldset_two__legend">
-      <i class="fa-regular fa-keyboard leyend-icon"></i>
-      RELLENA
-      <i class="fa-solid fa-chevron-up icons arrow-up js-arrow-up collapsed"></i>
-      <i class="fa-solid fa-chevron-down icons arrow-down js-arrow-down"></i>
-    </legend>
-  </div>
-  <div class="form_complete js-collapsedArea collapsed">
-    <label for="name">Nombre completo</label>
-    <input class="js-name" type="text" id="name" placeholder="Ej:Sally Jill" />
-    <label for="job">Puesto</label>
-    <input class="js-job" type="text" id="job" placeholder="Ej: Front-end unicorn" />
-    <label for="photo">Imagen de perfil</label>
-    <div class="form_complete_button">
-      <div>
-        <label class="button" for="">Añadir imagen</label>
-      </div>
-      <div>
-        <input class="js-photo js__profile-upload-btn" type="file" name="photo" id="photo" />
-      </div>
-      <div class="image-preview-div js__profile-preview"></div>
-    </div>
-    <label for="email">Email</label>
-    <input class="js-email" type="email" id="email" placeholder="Ej:sally-hill@gmail.com" />
-    <label for="tel">Teléfono</label>
-    <input class="js-number" type="tel" id="phone" placeholder="Ej: 555-555-555" />
-    <label for="linkedin">Linkedin</label>
-    <input class="js-linkedin" type="text" id="linkedin" placeholder="Ej: linkendin.com/in/sally.hill" />
-    <label for="git">GitHub</label>
-    <input class="js-git" type="text" id="github" placeholder="Ej:@sally-hill" />
-  </div>
-
-  <div class="container">
-    <span class="container__line"></span>
-  </div>
-</fieldset>
-    <fieldset class="fieldset__three">
-    <div class="fieldset__three--box js-leyends">
-        <legend class="fieldset__three--legend">
-            <i class="fa-solid fa-share-nodes fieldset__three--icon">
-            </i>
-            COMPARTE
-            <i class="fa-solid fa-chevron-up fieldset__three--up js-arrow-up collapsed">
-            </i>
-            <i class="fa-solid fa-chevron-down icon_down fieldset__three--down js-arrow-down">
-            </i>
-
-
-        </legend>
-
-    </div>
-    <div class="button__share collapsed js-collapsedArea">
-        <button class="button__share--content js-button"><i
-                class="fa-solid fa-address-card button__share--icon"></i>CREAR TARJETA</button>
-    </div>
-    <div class="container">
-        <span class="container__line"></span>
-    </div>
-    <div class="profile hiden js-profile">
-        <h2 class="profile__card">La tarjeta ha sido creada:</h2>
-        <span class="profile__link"></span>
-        <button class="profile__twitter">
-            <i class="fa-brands fa-twitter"></i>
-            <span>Compartir en twitter</span>
-        </button>
-    </div>
-
-</fieldset>
-</form>
     </main>
     <footer class="footer">
-  <span>Awesome profile-cards @2018</span>
-  <figure class="footer__logo">
-    <img src="./images/logo-adalab.png" alt="Esto es un logo" />
-  </figure>
-</footer>
+        <span>Awesome profile-cards @2018</span>
+        <figure class="footer__logo">
+            <img src="./images/logo-adalab.png" alt="Esto es un logo">
+        </figure>
+    </footer>
 
+</body>
 
-    <script  src="./js/main.js" type="text/javascript"  ></script>
-  </body>
 </html>
