@@ -1,36 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome cards</title>
-    <script
-      src="https://kit.fontawesome.com/81f7d3236c.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./scss/_main_page.scss" />
-  </head>
 
-  <body>
-    <load src="partials/header.html" />
-    <main class="container">
-      <load src="partials/section_image.html" />
-      <load src="partials/form.html" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/81f7d3236c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./scss/_landing.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="main">
+        <figure class="main__img">
+            <img src="./images/logo-awesome-profile-cards.svg" alt="Esto es una tarjeta">
+        </figure>
+        <div class="main__presentation">
+            <h2>Crea tu tarjeta de visita</h2>
+            <p>Crea mejores contactos profesionales de forma fácil y cómoda</p>
+        </div>
+        <div class="main__icons">
+            <div>
+                <i class="fa-regular fa-object-ungroup"></i>
+                <span>Diseña</span>
+            </div>
+
+            <div>
+                <i class="fa-regular fa-keyboard"></i>
+                <span>Rellena</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>Comparte</span>
+            </div>
+
+        </div>
+
+        <div class="main__button">
+            <a href="landing1.html">COMENZAR</a>
+        </div>
+
     </main>
-    <load src="partials/footer.html" />
+    <footer class="footer">
+        <span>Awesome profile-cards @2018</span>
+        <figure class="footer__logo">
+            <img src="./images/logo-adalab.png" alt="Esto es un logo">
+        </figure>
+    </footer>
 
-    <script  src="./js/main.js" type="text/javascript"  ></script>
-  </body>
+</body>
+
 </html>

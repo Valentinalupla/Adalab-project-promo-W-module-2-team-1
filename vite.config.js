@@ -43,8 +43,8 @@ export default defineConfig({
       input: inputFilesList,
       output: {
         sourcemap: true,
-        entryFileNames: ({name}) => {
-          if( name === 'main' ) {
+        entryFileNames: ({ name }) => {
+          if (name === 'main') {
             return 'js/main.js';
           }
           // default value
@@ -55,7 +55,7 @@ export default defineConfig({
     },
   },
   server: {
-    open: "/landing.html",
+    open: "/index.html",
   },
   plugins: [
     injectHTML(),
