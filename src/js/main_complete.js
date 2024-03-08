@@ -18,6 +18,8 @@ const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
+let imgtoLoad;
+
 /**
 
  * @param {evento} e 
@@ -31,9 +33,26 @@ function getImage(e) {
 function writeImage() {
 
   const imageData = fr.result;
-  compressImage(imageData);
+
+  if (imageData.length <= 39800) {
+
+    imgtoLoad = imageData;
+
+    profileImage.style.backgroundImage = `url(${imageData})`;
+    profilePreview.style.backgroundImage = `url(${imageData})`;
+    localStorage.setItem('savedImage', imgtoLoad);
+
+
+
+  } else {
+
+    compressImage(imageData);
+
+  }
+
 }
 function compressImage(imageData) {
+
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
   const img = new Image();
@@ -47,14 +66,17 @@ function compressImage(imageData) {
     ctx.drawImage(img, 0, 0);
 
     // Convertir el canvas a una cadena base64 con compresión
+
+
     const compressedData = canvas.toDataURL('image/jpeg', 0.1); // 0.5 representa el nivel de compresión
 
 
     if (compressedData.length <= 39800) {
+      imgtoLoad = compressedData;
 
       profileImage.style.backgroundImage = `url(${compressedData})`;
       profilePreview.style.backgroundImage = `url(${compressedData})`;
-      localStorage.setItem('savedImage', compressedData);
+      localStorage.setItem('savedImage', imgtoLoad);
       console.log("Imagen guardada con éxito.");
     } else {
 

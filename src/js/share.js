@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 document.body.addEventListener('click', function (event) {
 
-  if (savedImage !== null) {
+  if (imgtoLoad == null) {
     formData = {
 
       palette: selectedPalette,
@@ -67,6 +67,7 @@ document.body.addEventListener('click', function (event) {
       photo: savedImage,
 
     }
+
   } else {
     formData = {
 
@@ -77,12 +78,13 @@ document.body.addEventListener('click', function (event) {
       email: inputEmail.value,
       linkedin: inputLinkedin.value,
       github: inputGit.value,
-      photo: compressedData,
+      photo: imgtoLoad,
 
     }
+
+
   }
   localStorage.setItem('savedData', JSON.stringify(formData));
-
 
 });
 function handleClickProfile(event) {
