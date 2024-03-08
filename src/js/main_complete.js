@@ -28,14 +28,42 @@ function getImage(e) {
   fr.readAsDataURL(myFile);
 
 }
-
 function writeImage() {
-  profileImage.style.backgroundImage = `url(${fr.result})`;
-  profilePreview.style.backgroundImage = `url(${fr.result})`;
-  localStorage.setItem('savedImage', fr.result);
 
+  const imageData = fr.result;
+  compressImage(imageData);
 }
+function compressImage(imageData) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  const img = new Image();
 
+  img.onload = function () {
+    // Establecer el tamaño del canvas para que coincida con el de la imagen
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    // Dibujar la imagen en el canvas
+    ctx.drawImage(img, 0, 0);
+
+    // Convertir el canvas a una cadena base64 con compresión
+    const compressedData = canvas.toDataURL('image/jpeg', 0.5); // 0.5 representa el nivel de compresión
+
+    // Verificar si la longitud de la cadena comprimida es menor que el límite
+    if (compressedData.length <= 39800) {
+      // La longitud de la cadena comprimida es aceptable, puedes usarla
+      profileImage.style.backgroundImage = `url(${compressedData})`;
+      profilePreview.style.backgroundImage = `url(${compressedData})`;
+      localStorage.setItem('savedImage', compressedData);
+      console.log("Imagen guardada con éxito.");
+    } else {
+      // La longitud de la cadena comprimida excede el límite
+      console.log("La imagen comprimida es demasiado grande.");
+    }
+  };
+
+  img.src = imageData;
+}
 
 fileField.addEventListener('change', getImage);
 

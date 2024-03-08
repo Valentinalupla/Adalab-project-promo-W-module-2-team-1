@@ -53,20 +53,36 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 document.body.addEventListener('click', function (event) {
-  formData = {
 
-    palette: selectedPalette,
-    name: inputName.value,
-    job: inputJob.value,
-    phone: inputNumber.value,
-    email: inputEmail.value,
-    linkedin: inputLinkedin.value,
-    github: inputGit.value,
-    photo: savedImage,
+  if (savedImage !== null) {
+    formData = {
 
+      palette: selectedPalette,
+      name: inputName.value,
+      job: inputJob.value,
+      phone: inputNumber.value,
+      email: inputEmail.value,
+      linkedin: inputLinkedin.value,
+      github: inputGit.value,
+      photo: savedImage,
+
+    }
+  } else {
+    formData = {
+
+      palette: selectedPalette,
+      name: inputName.value,
+      job: inputJob.value,
+      phone: inputNumber.value,
+      email: inputEmail.value,
+      linkedin: inputLinkedin.value,
+      github: inputGit.value,
+      photo: fr.result,
+
+    }
   }
-
   localStorage.setItem('savedData', JSON.stringify(formData));
+
 
 });
 function handleClickProfile(event) {
@@ -78,11 +94,14 @@ function handleClickProfile(event) {
   }).then((response) => response.json())
     .then(data => {
 
-      console.log('Respuesta del servidor:', data);
-      linkSpace.innerHTML = `<a href="${data.cardURL}"target="_blank">${data.cardURL}</a>`;
-      console.log(data.cardURL);
+      if (data.success == false) {
+        linkSpace.innerHTML = `error ${data.error}`;
+      } else {
+        console.log('Respuesta del servidor:', data);
+        linkSpace.innerHTML = `<a href="${data.cardURL}"target="_blank">${data.cardURL}</a>`;
+        console.log(data.cardURL);
 
-
+      }
     })
 
   linkButton.classList.add('play');
