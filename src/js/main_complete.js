@@ -47,17 +47,17 @@ function compressImage(imageData) {
     ctx.drawImage(img, 0, 0);
 
     // Convertir el canvas a una cadena base64 con compresión
-    const compressedData = canvas.toDataURL('image/jpeg', 0.5); // 0.5 representa el nivel de compresión
+    const compressedData = canvas.toDataURL('image/jpeg', 0.1); // 0.5 representa el nivel de compresión
 
-    // Verificar si la longitud de la cadena comprimida es menor que el límite
+
     if (compressedData.length <= 39800) {
-      // La longitud de la cadena comprimida es aceptable, puedes usarla
+
       profileImage.style.backgroundImage = `url(${compressedData})`;
       profilePreview.style.backgroundImage = `url(${compressedData})`;
       localStorage.setItem('savedImage', compressedData);
       console.log("Imagen guardada con éxito.");
     } else {
-      // La longitud de la cadena comprimida excede el límite
+
       console.log("La imagen comprimida es demasiado grande.");
     }
   };

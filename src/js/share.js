@@ -77,7 +77,7 @@ document.body.addEventListener('click', function (event) {
       email: inputEmail.value,
       linkedin: inputLinkedin.value,
       github: inputGit.value,
-      photo: fr.result,
+      photo: compressedData,
 
     }
   }
