@@ -10,9 +10,13 @@ let formData;
 
 const savedImage = localStorage.getItem('savedImage');
 const savedDataJSON = localStorage.getItem('savedData');
+let savedData;
+
+
 
 
 window.addEventListener('DOMContentLoaded', function () {
+
 
   if (savedImage) {
 
@@ -24,7 +28,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-    const savedData = JSON.parse(savedDataJSON);
+    savedData = JSON.parse(savedDataJSON);
 
     inputName.value = savedData.name;
     inputJob.value = savedData.job;
@@ -54,60 +58,81 @@ window.addEventListener('DOMContentLoaded', function () {
 
 document.body.addEventListener('click', function (event) {
 
-  if (imgtoLoad == null) {
-    formData = {
+  formData = {
 
-      palette: selectedPalette,
-      name: inputName.value,
-      job: inputJob.value,
-      phone: inputNumber.value,
-      email: inputEmail.value,
-      linkedin: inputLinkedin.value,
-      github: inputGit.value,
-      photo: savedImage,
-
-    }
-
-  } else {
-    formData = {
-
-      palette: selectedPalette,
-      name: inputName.value,
-      job: inputJob.value,
-      phone: inputNumber.value,
-      email: inputEmail.value,
-      linkedin: inputLinkedin.value,
-      github: inputGit.value,
-      photo: imgtoLoad,
-
-    }
-
+    palette: selectedPalette,
+    name: inputName.value,
+    job: inputJob.value,
+    phone: inputNumber.value,
+    email: inputEmail.value,
+    linkedin: inputLinkedin.value,
+    github: inputGit.value,
+    photo: savedImage,
 
   }
+
+  if (imgtoLoad == null) {
+
+    formData.photo = savedImage;
+
+
+  } else {
+    formData.photo = imgtoLoad;
+
+  }
+
+  if (selectedPalette == undefined) {
+
+    formData.palette = 1;
+
+  } else {
+    formData.palette = selectedPalette;
+  }
+
+  if (inputLinkedin.value == "" || inputGit.value == "") {
+
+    formData.github = " ";
+    formData.linkedin = " ";
+
+  } else {
+
+    formData.linkedin = inputLinkedin.value;
+    formData.github = inputGit.value;
+  }
+
+
+
+  console.log(formData.linkedin);
   localStorage.setItem('savedData', JSON.stringify(formData));
+
+
 
 });
 function handleClickProfile(event) {
   event.preventDefault();
-  fetch('https://dev.adalab.es/api/card/', {
-    method: 'POST',
-    body: JSON.stringify(formData),
-    headers: { 'Content-type': 'application/json' }
-  }).then((response) => response.json())
-    .then(data => {
+  validarFormulario();
 
-      if (data.success == false) {
-        linkSpace.innerHTML = `error ${data.error}`;
-      } else {
-        console.log('Respuesta del servidor:', data);
-        linkSpace.innerHTML = `<a href="${data.cardURL}"target="_blank">${data.cardURL}</a>`;
-        console.log(data.cardURL);
-
-      }
-    })
-
-  linkButton.classList.add('play');
-  profileCreated.classList.remove("hiden")
+  /* event.preventDefault();
+   fetch('https://dev.adalab.es/api/card/', {
+     method: 'POST',
+     body: JSON.stringify(formData),
+     headers: { 'Content-type': 'application/json' }
+   }).then((response) => response.json())
+     .then(data => {
+ 
+       if (data.success == false) {
+         linkSpace.innerHTML = `error ${data.error}`;
+       } else {
+         console.log('Respuesta del servidor:', data);
+         linkSpace.innerHTML = `<a href="${data.cardURL}"target="_blank">${data.cardURL}</a>`;
+         console.log(data.cardURL);
+ 
+       }
+     })
+ 
+   
+   linkButton.classList.add('play');
+   profileCreated.classList.remove("hiden")*/
 }
 
 

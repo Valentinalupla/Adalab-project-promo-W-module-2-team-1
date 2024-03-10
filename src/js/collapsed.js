@@ -1,4 +1,4 @@
-'use strict'; 
+'use strict';
 //flechas
 const arrowUP = document.querySelectorAll(".js-arrow-up");
 const arrowDown = document.querySelectorAll(".js-arrow-down");
@@ -7,11 +7,17 @@ const toCollapseMenu = document.querySelectorAll('.js-collapsedArea');
 
 
 leyend.forEach(section => {
+
    section.addEventListener('click', handleCollapsables)
+
 })
+
 
 //Para que funcione esto hay que modificar todo el html 
 function handleCollapsables(event) {
+
+
+
    const clickedHeader = event.currentTarget;
    const clickedSection = (clickedHeader.nextSibling).nextSibling;
 
@@ -44,3 +50,5 @@ function handleCollapsables(event) {
    })
 
 }
+
+

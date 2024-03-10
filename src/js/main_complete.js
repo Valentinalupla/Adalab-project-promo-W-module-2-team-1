@@ -9,6 +9,7 @@ const inputLinkedin = document.querySelector('.js-linkedin');
 const inputGit = document.querySelector('.js-git');
 const cardPreviewName = document.querySelector('.js-preview-NameCard');
 const cardPreviewJob = document.querySelector('.js-preview-JobCard');
+const mensajeError = document.querySelector('.js-errMsg');
 
 
 
@@ -19,6 +20,56 @@ const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
 let imgtoLoad;
+
+
+console.log(` ${inputNumber.value} `);
+
+
+function validarFormulario() {
+
+  if ((!savedData || savedData.name == '') && inputName.value == "" ||
+    (!savedData || savedData.job == '') && inputJob.value == "" ||
+    imgtoLoad == null && (!savedImage || savedImage == null) ||
+    (!savedData || savedData.email == '') && inputEmail.value == "" ||
+    (!savedData || savedData.phone == '') && inputNumber.value == "") {
+
+    console.log("datos actuales")
+    mensajeError.innerHTML = 'Por favor, complete todos los campos obligatorios.';
+
+  } else {
+
+    mensajeError.innerHTML = ''; // Limpiar el mensaje de error
+
+    fetch('https://dev.adalab.es/api/card/', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: { 'Content-type': 'application/json' }
+    }).then((response) => response.json())
+      .then(data => {
+
+        if (data.success == false) {
+          linkSpace.innerHTML = `error ${data.error}`;
+        } else {
+          console.log('Respuesta del servidor:', data);
+          linkSpace.innerHTML = `<a href="${data.cardURL}"target="_blank">${data.cardURL}</a>`;
+          console.log(data.cardURL);
+
+        }
+      })
+
+    linkButton.classList.add('play');
+    profileCreated.classList.remove("hiden")
+
+    leyend.forEach(section => {
+
+      section.removeEventListener('click', handleCollapsables);
+
+    })
+
+
+  }
+
+}
 
 /**
 
@@ -40,6 +91,7 @@ function writeImage() {
 
     profileImage.style.backgroundImage = `url(${imageData})`;
     profilePreview.style.backgroundImage = `url(${imageData})`;
+
     localStorage.setItem('savedImage', imgtoLoad);
 
 
@@ -47,6 +99,7 @@ function writeImage() {
   } else {
 
     compressImage(imageData);
+
 
   }
 
@@ -68,7 +121,7 @@ function compressImage(imageData) {
     // Convertir el canvas a una cadena base64 con compresión
 
 
-    const compressedData = canvas.toDataURL('image/jpeg', 0.1); // 0.5 representa el nivel de compresión
+    const compressedData = canvas.toDataURL('image/jpeg', 0.2); // 0.5 representa el nivel de compresión
 
 
     if (compressedData.length <= 39800) {
