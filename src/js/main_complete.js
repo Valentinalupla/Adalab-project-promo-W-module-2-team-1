@@ -10,6 +10,7 @@ const inputGit = document.querySelector('.js-git');
 const cardPreviewName = document.querySelector('.js-preview-NameCard');
 const cardPreviewJob = document.querySelector('.js-preview-JobCard');
 const mensajeError = document.querySelector('.js-errMsg');
+const mensajeImagen = document.querySelector('.js-messageImg');
 
 
 
@@ -132,7 +133,7 @@ function compressImage(imageData) {
       localStorage.setItem('savedImage', imgtoLoad);
       console.log("Imagen guardada con éxito.");
     } else {
-
+      mensajeImagen.innerHTML = "La imagen comprimida es demasiado grande."
       console.log("La imagen comprimida es demasiado grande.");
     }
   };
