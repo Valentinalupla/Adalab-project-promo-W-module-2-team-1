@@ -11,7 +11,7 @@ const cardPreviewName = document.querySelector('.js-preview-NameCard');
 const cardPreviewJob = document.querySelector('.js-preview-JobCard');
 const mensajeError = document.querySelector('.js-errMsg');
 const mensajeImagen = document.querySelector('.js-messageImg');
-
+const twitterShareButton = document.querySelector(".js-twitter-share-button");
 
 
 //código img
@@ -54,8 +54,8 @@ function validarFormulario() {
           console.log('Respuesta del servidor:', data);
           linkSpace.innerHTML = `<a href="${data.cardURL}"target="_blank">${data.cardURL}</a>`;
           console.log(data.cardURL);
-
         }
+        twitterShareButton.href = `https://twitter.com/intent/tweet?text=${data.cardURL}`;
       })
 
     linkButton.classList.add('play');
