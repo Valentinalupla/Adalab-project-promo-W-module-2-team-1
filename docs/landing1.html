@@ -141,36 +141,46 @@
     </legend>
   </div>
   <div class="form_complete js-collapsedArea collapsed">
-    <label for="name">Nombre completo</label>
+    <label for="name">Nombre completo *</label>
     <input class="js-name" type="text" id="name" placeholder="Ej:Sally Jill" />
-    <label for="job">Puesto</label>
+    <label for="job">Puesto *</label>
     <input class="js-job" type="text" id="job" placeholder="Ej: Front-end unicorn" />
-    <label for="photo">Imagen de perfil</label>
+    <label for="photo">Imagen de perfil *</label>
     <div class="form_complete_button">
       <div>
         <label class="button" for="">Añadir imagen</label>
+       
       </div>
+      
       <div>
         <input class="js-photo js__profile-upload-btn" type="file" name="photo" id="photo" />
       </div>
       <div class="image-preview-div js__profile-preview"></div>
     </div>
-    <label for="email">Email</label>
+    <div>
+      <p class="js-messageImg"></p>
+    </div>
+    <label for="email">Email *</label>
     <input class="js-email" type="email" id="email" placeholder="Ej:sally-hill@gmail.com" />
-    <label for="tel">Teléfono</label>
+    <label for="tel">Teléfono *</label>
     <input class="js-number" type="tel" id="phone" placeholder="Ej: 555-555-555" />
     <label for="linkedin">Linkedin</label>
     <input class="js-linkedin" type="text" id="linkedin" placeholder="Ej: linkendin.com/in/sally.hill" />
     <label for="git">GitHub</label>
-    <input class="js-git" type="text" id="github" placeholder="Ej:@sally-hill" />
+    <input class="js-git" type="text" id="github" placeholder="Ej:@sally-hill" /><br>
+
+
+
   </div>
+
+  <p class="js-errMsg"></p>
 
   <div class="container">
     <span class="container__line"></span>
   </div>
 </fieldset>
     <fieldset class="fieldset__three">
-    <div class="fieldset__three--box js-leyends">
+    <div class="fieldset__three--box js-leyends share">
         <legend class="fieldset__three--legend">
             <i class="fa-solid fa-share-nodes fieldset__three--icon">
             </i>
@@ -184,7 +194,11 @@
         </legend>
 
     </div>
+
+
+
     <div class="button__share collapsed js-collapsedArea">
+
         <button class="button__share--content js-button"><i
                 class="fa-solid fa-address-card button__share--icon"></i>CREAR TARJETA</button>
     </div>
@@ -196,7 +210,7 @@
         <span class="profile__link"></span>
         <button class="profile__twitter">
             <i class="fa-brands fa-twitter"></i>
-            <span>Compartir en twitter</span>
+            <a class="twitter-share-button js-twitter-share-button" href="" target="_blank">Compartir en twitter</a>
         </button>
     </div>
 
